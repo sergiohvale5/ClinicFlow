@@ -1,0 +1,20 @@
+2026-10-02T00:46:33.435Z info: Sérgio
+[2026-10-02T00:47:35.729Z] info: Sérgio
+[2026-10-02T01:44:33.797Z] info: Iniciando processo de criação das tabelas do banco de dados
+[2026-10-02T01:44:33.851Z] error: Erro ao criar tabela usuário
+[2026-10-02T01:44:50.132Z] info: Iniciando processo de criação das tabelas do banco de dados
+[2026-10-02T01:44:50.269Z] info: Tabela especialidades criada
+[2026-10-02T01:48:50.666Z] info: Iniciando processo de criação das tabelas do banco de dados
+[2026-10-02T01:48:50.723Z] info: Tabela especialidades criada
+[2026-10-02T01:56:42.280Z] info: Iniciando processo de criação das tabelas do banco de dados
+[2026-10-02T01:56:44.458Z] info: Tabela especialidades criada
+[2026-10-03T01:57:10.874Z] error: Erro ao criar tabela especialidades
+[2026-10-03T01:57:35.927Z] error: Erro ao criar tabela especialidades
+[2026-10-03T01:57:55.754Z] error: Erro ao criar tabela especialidades
+[2026-10-03T01:58:37.013Z] error: Erro ao criar tabela especialidades
+[2026-10-03T01:59:15.294Z] error: Erro ao criar tabela especialidades
+[2026-10-03T02:00:00.117Z] info: Tabela medicos criada
+[2026-10-03T02:09:54.876Z] info: Tabela procedimentos criada
+[2026-10-03T02:24:59.381Z] info: Tabela agendas criadas
+[2026-10-03T02:35:18.508Z] info: Tabela pacientes criada
+[2026-10-03T03:05:01.001Z] info: Tabela consultas criada

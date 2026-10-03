@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server/server.ts",
+    "dev": "tsx watch src/database/migrations/006_create_consultas.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,8 +13,15 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@types/dotenv": "^6.1.1",
     "@types/node": "^26.6.3",
+    "@types/pg": "^8.23.1",
+    "pool": "^0.4.1",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "pg": "^8.23.1"
   }
 }
