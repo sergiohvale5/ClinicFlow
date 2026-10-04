@@ -18,3 +18,7 @@
 [2026-10-03T02:24:59.381Z] info: Tabela agendas criadas
 [2026-10-03T02:35:18.508Z] info: Tabela pacientes criada
 [2026-10-03T03:05:01.001Z] info: Tabela consultas criada
+[2026-10-04T03:45:46.461Z] info: Redis connectado
+[2026-10-04T03:45:46.471Z] info: Servidor inicializado
+[2026-10-04T03:49:12.619Z] info: Redis connectado
+[2026-10-04T03:49:12.626Z] info: Servidor inicializado
