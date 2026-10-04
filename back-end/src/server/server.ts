@@ -3,12 +3,12 @@ import helmet from "helmet";
 import { limit } from "../config/rateLimit";
 import cors from "cors";
 import morgan from "morgan";
-import type { Request, Response } from "express";
 import { redis } from "../config/redis";
 import { logger } from "../config/winston";
 import { env } from "../config/dotenv";
+import { router } from "../routes/router";
 
-//Configuração do servidor express e implementação de medidas de segurança
+//Configuração dos middlewares globais
 const server = express();
 
 server.use(express.json());
@@ -24,16 +24,10 @@ server.use(cors(
 ));
 server.use(morgan("dev"));
 
-//Estrutura da api rest
-server.get("/teste", (req: Request, res: Response) => {
-    res.status(200).json(
-        {
-            message: "Api funcionando"
-        }
-    );
-});
+// Registro das rotas da aplicação
+server.use("/", router);
 
-//Inicialização do sevidor e do redis
+//Inicialização do servidor e conexão com o Redis
 async function inicializacao() {
     try{
         await redis.connect();

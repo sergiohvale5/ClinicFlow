@@ -9,7 +9,7 @@ async function criandoTabelaEspecialidades() {
         await pool.query(
             `CREATE TABLE IF NOT EXISTS especialidades(
                 id SERIAL PRIMARY KEY,
-                nome VARCHAR(100)
+                nome VARCHAR(100) NOT NULL UNIQUE
             )`
         );
 
