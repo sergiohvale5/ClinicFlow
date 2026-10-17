@@ -1,7 +1,12 @@
+import "../../front-end/src/styles/App.css";
+import AppPages from "./pages/appPages";
+
 function App() {
   return (
     <>
-      Mano brão
+      <div className="app">
+        <AppPages />
+      </div>
     </>
   )
 }
