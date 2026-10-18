@@ -6,3 +6,8 @@
     box-sizing: border-box;
     font-family: Manrope, Arial, sans-serif;
 }
+
+.app{
+    display: flex;
+    flex-direction: row;
+}

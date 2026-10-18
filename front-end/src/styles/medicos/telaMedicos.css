@@ -1,0 +1,187 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.sobreposicao{
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+
+    background-color: #060c1a8c;
+
+    padding: 16px;
+
+    z-index: 5;
+
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela_medicos{
+    width: 100%;
+    max-width: 560px;
+    height: 267px;
+
+    background-color: #ffffff;
+    color: #1b2a41;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 16px;
+
+    padding: 22px;
+
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.titulo_medico{
+    margin: 0 0 14px;
+
+    font-size: 18px;
+
+    cursor: default;
+}
+
+.cadastroMedicos__medicosCadastrados{
+    display: flex;
+    flex-direction: row;
+
+    gap: 12px;
+}
+
+.cadastro_medicos{
+    width: 100%;
+    max-width: 251px;
+
+    height: 80px;
+
+    padding: 22px;
+
+    border-radius: 14px;
+    border: 1px solid #d9e2ef;
+
+    background-color: #f5f8fc;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    gap: 3px;
+
+    transition: all 0.2s ease;
+}
+
+.cadastro_medicos h2{
+    color: #303d53;
+
+    font-size: 18px;
+}
+
+.cadastro_medicos span{
+    color: #5d6f8a;
+
+    font-size: 11px;
+}
+
+.cadastro_medicos:hover{
+    cursor: pointer;
+
+    transform: scale(1.02);
+}
+
+.cadastro_medicos:active{
+    transform: scale(1);
+}
+
+.medicos_cadastrados{
+    width: 100%;
+    max-width: 251px;
+
+    height: 80px;
+
+    padding: 22px;
+
+    border-radius: 14px;
+    border: 1px solid #d9e2ef;
+
+    background-color: #f5f8fc;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    gap: 3px;
+
+    transition: all 0.2s ease;
+}
+
+.medicos_cadastrados h2{
+    color: #303d53;
+
+    font-size: 18px;
+}
+
+.medicos_cadastrados span{
+    color: #5d6f8a;
+
+    font-size: 11px;
+}
+
+.especialidades_procedimentos{
+    width: 100%;
+    max-width: 514px;
+
+    height: 84px;
+
+    padding: 22px;
+
+    border-radius: 14px;
+    border: 1px solid #d9e2ef;
+
+    background-color: #f5f8fc;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    gap: 3px;
+
+    transition: all 0.2s ease;
+}
+
+.especialidades_procedimentos h2{
+    color: #303d53;
+
+    font-size: 18px;
+}
+
+.especialidades_procedimentos span{
+    color: #5d6f8a;
+
+    font-size: 11px;
+}
+
+.cadastro_medicos:hover,
+.medicos_cadastrados:hover,
+.especialidades_procedimentos:hover{
+    cursor: pointer;
+
+    transform: scale(1.02);
+}
+
+.cadastro_medicos:active,
+.medicos_cadastrados:active,
+.especialidades_procedimentos:active{
+    transform: scale(1);
+}

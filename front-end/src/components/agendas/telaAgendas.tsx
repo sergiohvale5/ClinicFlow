@@ -1,7 +1,11 @@
+import "../../styles/agendas/telaAgendas.css";
+
 function TelaAgendas(){
     return(
         <>
-            sds
+            <div className="tela_agendas">
+                sdf
+            </div>
         </>
     );
 }
