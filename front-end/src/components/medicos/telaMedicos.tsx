@@ -1,5 +1,7 @@
 import "../../styles/medicos/telaMedicos.css";
 import { Link } from "react-router-dom";
+import { AiOutlineUser } from "react-icons/ai";
+import { IoCalendarClearOutline } from "react-icons/io5";
 
 function TelaMedicos(){
     return(
@@ -28,6 +30,26 @@ function TelaMedicos(){
                         <h2>Especialidades e procedimentos</h2>
 
                         <span>Cadastrar, editar ou inativar</span>
+                    </div>
+
+                    <hr />
+
+                    <div className="atalhos_container">
+                        <span className="atalhos_titulo">Ir para</span>
+
+                        <div className="atalhos_popup_medicos">
+                            <button className="atalho_pacientes">
+                                <AiOutlineUser className="icone-atalhos"/>
+                            
+                                Pacientes
+                            </button>
+
+                            <button className="atalho_agenda">
+                                <IoCalendarClearOutline className="icone-atalhos" />
+
+                                Agenda
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
