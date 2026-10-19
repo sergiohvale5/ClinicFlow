@@ -3,6 +3,7 @@ import Layouts from "../layout/layout";
 import TelaPacientes from "../components/pacientes/telaPacientes";
 import TelaMedicos from "../components/medicos/telaMedicos";
 import TelaAgendas from "../components/agendas/telaAgendas";
+import TelaMedicosCadastrados from "../components/medicos/telaMedicosCadastrados";
 
 function AppPages(){
     return(
@@ -14,6 +15,7 @@ function AppPages(){
                         <Route path="agendamentos" element={<TelaAgendas />}/>
                         <Route path="medicos" element={<TelaMedicos />} />
                         <Route path="pacientes" element={<TelaPacientes />}/>
+                        <Route path="medicos_cadastrados" element={<TelaMedicosCadastrados />}/>
                     </Route>
                 </Routes>
             </BrowserRouter>

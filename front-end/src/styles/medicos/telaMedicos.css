@@ -16,7 +16,7 @@
 
     z-index: 5;
 
-    display: none;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -50,11 +50,15 @@
     cursor: default;
 }
 
-.cadastroMedicos__medicosCadastrados{
+.cadastroMedicos_medicosCadastrados{
     display: flex;
     flex-direction: row;
 
     gap: 12px;
+}
+
+.link{
+    text-decoration: none;
 }
 
 .cadastro_medicos{
