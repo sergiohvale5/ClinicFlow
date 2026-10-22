@@ -4,20 +4,18 @@
     box-sizing: border-box;
 }
 
-.sobreposicao{
+.sobreposicao {
+    position: fixed;
+    inset: 0;
+
     width: 100%;
     height: 100vh;
 
-    position: fixed;
-
     background-color: #060c1a8c;
 
-    padding: 16px;
-
-    z-index: 5;
+    z-index: 9999;
 
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -47,6 +45,31 @@
     font-size: 18px;
 
     cursor: default;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fechar_popup{
+    align-self: flex-end;
+
+    border: none;
+
+    background: transparent;
+
+    color: #303d53;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.fechar_popup:hover{
+    transform: scale(1.03);
 }
 
 .cadastroMedicos_medicosCadastrados{
@@ -178,7 +201,9 @@
 .atalho_pacientes:hover,
 .atalho_agenda:hover{
     cursor: pointer;
+
     border-color: #303d53;
+
     transform: scale(1.02);
 }
 
@@ -192,50 +217,82 @@
 
 hr{
     width: 100%;
+
     margin: 18px 0 18px 0;
+
     border: 1px solid #d9e2ef;
 }
 
 
 .atalhos_container{
     width: 100%;
+
     display: flex;
     flex-direction: column;
 }
 
 .atalhos_titulo{
     margin: 0 0 8px;
+
     color: #5d6f8a;
+
     font-size: 12px;
+    font-weight: bolder;
+
+    cursor: default;
 }
 
 .atalhos_popup_medicos{
     width: 100%;
+
     display: flex;
     flex-wrap: wrap;
+
     gap: 8px;
+
     font-size: 14px;
 }
 
 .atalho_pacientes, .atalho_agenda{
     display: flex;
     align-items: center;
+
     gap: 10px;
-    flex: 1;
-    min-width: 130px;
+
+    width: 100%;
+
     border: 1px solid #d9e2ef;
     border-radius: 10px;
+
     padding: 10px 12px;
+
     cursor: pointer;
+
     font-weight: 700;
+
     border: 1px solid #d9e2ef;
+
     background-color: #f5f8fc;
     color: #303d53;
+
     transition: all 0.2s ease;
 }
 
 .icone-atalhos{
     width: 18px;
     height: 18px;
+    
     color: #303d53;
+}
+
+.link_pacientes{
+    text-decoration: none;
+
+    flex: 1;
+}
+
+.link_agenda{
+    text-decoration: none;
+
+    flex: 1;
 }

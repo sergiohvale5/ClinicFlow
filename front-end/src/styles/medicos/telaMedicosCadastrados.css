@@ -33,12 +33,16 @@
 
 .texto_medicos{
     color: #ffffff;
+
+    cursor: default;
 }
 
 .texto_gerenciamento_atendimento{
     font-size: 14px;
 
     color: #b3c6dd;
+
+    cursor: default;
 }
 
 .btn_atalhos{
@@ -97,5 +101,111 @@
 
 .btn_cadastrar_medicos:active,
 .btn_especialidades_procedimentos:active{
+    transform: scale(1);
+}
+
+
+.tabela_cadastro_medicos {
+    width: 100%;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 15px;
+
+    background-color: #f5f8fc;
+
+    overflow-x: auto;
+}
+
+.dados_cadastro_medico,
+.dados_medicos {
+    min-width: 1050px;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr 1.3fr 1.5fr 0.6fr 125px;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    cursor: default;
+}
+
+.nome_doutor{
+    color: black;
+
+    font-weight: bolder;
+}
+
+.dados_cadastro_medico {
+    color: #5d6f8a;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    border-bottom: 1px solid #d9e2ef;
+}
+
+.dados_medicos {
+    color: #344563;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.dados_cadastro_medico span,
+.dados_medicos span {
+    min-width: 0;
+}
+
+.btn_editar_excluir {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.btn_editar,
+.btn_excluir {
+    width: 55px;
+
+    flex-shrink: 0;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    padding: 6px 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease;
+}
+
+.btn_editar {
+    background-color: #3f6ea8;
+}
+
+.btn_excluir {
+    background-color: #c0453f;
+}
+
+.btn_editar:hover,
+.btn_excluir:hover{
+    transform: scale(1.03);
+}
+
+.btn_editar:active,
+.btn_excluir:active{
     transform: scale(1);
 }

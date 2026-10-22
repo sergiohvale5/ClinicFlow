@@ -9,7 +9,11 @@ import { LuSun } from "react-icons/lu";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function TelaMenu(){
+interface TelaMenuProps {
+    onAbrirMedicos: () => void;
+}
+
+function TelaMenu({ onAbrirMedicos }: TelaMenuProps){
     const [efeitoMenu, setEfeitoMenu] = useState<boolean>(false);
     const [modoEscuro, setModoEscuro] = useState<boolean>(false);
 
@@ -47,13 +51,11 @@ function TelaMenu(){
                     </div>
                 </Link>
 
-                <Link to="/clinic_flow/medicos" className="link_menu">
-                    <div className={modoEscuro ? "menu_medicos_noturno" : "menu_medicos"}>
-                        <LuStethoscope className="icon_medico"/>
+                <div className={modoEscuro ? "menu_medicos_noturno" : "menu_medicos"} onClick={onAbrirMedicos}>
+                    <LuStethoscope className="icon_medico" />
 
-                        {!efeitoMenu ? <></> : <span>Médicos</span>}
-                    </div>
-                </Link>
+                    {!efeitoMenu ? <></> : <span>Médicos</span>}
+                </div>
 
                 <Link to="/clinic_flow/pacientes" className="link_menu">
                     <div className={modoEscuro ? "menu_pacientes_noturno" : "menu_pacientes"}>
