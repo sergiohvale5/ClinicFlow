@@ -4,23 +4,25 @@
     box-sizing: border-box;
 }
 
-.sobreposicao {
-    position: fixed;
-    inset: 0;
-
+.sobreposicao{
     width: 100%;
     height: 100vh;
 
+    position: fixed;
+
     background-color: #060c1a8c;
 
-    z-index: 9999;
+    padding: 16px;
+
+    z-index: 5;
 
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.tela_medicos{
+.popup_medicos, .popup_pacientes{
     width: 100%;
     max-width: 560px;
 
@@ -39,17 +41,12 @@
     justify-content: space-around;
 }
 
-.titulo_medico{
+.titulo_medico , .titulo_paciente{
     margin: 0 0 14px;
 
     font-size: 18px;
 
     cursor: default;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .fechar_popup{
@@ -72,10 +69,10 @@
     transform: scale(1.03);
 }
 
-.cadastroMedicos_medicosCadastrados{
+.cadastroMedicos_medicosCadastrados, 
+.cadastrarPacientes_gerenciarPacientes{
     display: flex;
     flex-direction: row;
-    margin-bottom: 14px;
     gap: 12px;
 }
 
@@ -83,7 +80,8 @@
     text-decoration: none;
 }
 
-.cadastro_medicos{
+.cadastro_medicos, 
+.cadastro_pacientes{
     flex: 1;
 
     height: 80px;
@@ -105,29 +103,23 @@
     transition: all 0.2s ease;
 }
 
-.cadastro_medicos h2{
+.cadastro_medicos h2, 
+.cadastro_pacientes h2{
     color: #303d53;
 
     font-size: 18px;
 }
 
-.cadastro_medicos span{
+.cadastro_medicos span, 
+.cadastro_pacientes span{
     color: #5d6f8a;
 
     font-size: 11px;
 }
 
-.cadastro_medicos:hover{
-    cursor: pointer;
 
-    transform: scale(1.02);
-}
-
-.cadastro_medicos:active{
-    transform: scale(1);
-}
-
-.medicos_cadastrados{
+.medicos_cadastrados, 
+.gerenciar_pacientes{
     flex: 1;
 
     height: 80px;
@@ -149,13 +141,15 @@
     transition: all 0.2s ease;
 }
 
-.medicos_cadastrados h2{
+.medicos_cadastrados h2, 
+.gerenciar_pacientes h2{
     color: #303d53;
 
     font-size: 18px;
 }
 
-.medicos_cadastrados span{
+.medicos_cadastrados span, 
+.gerenciar_pacientes span{
     color: #5d6f8a;
 
     font-size: 11px;
@@ -167,6 +161,8 @@
     height: 84px;
 
     padding: 22px;
+
+    margin-top: 5px;
 
     border-radius: 14px;
     border: 1px solid #d9e2ef;
@@ -198,101 +194,73 @@
 .cadastro_medicos:hover,
 .medicos_cadastrados:hover,
 .especialidades_procedimentos:hover,
+.cadastro_pacientes:hover,
+.gerenciar_pacientes:hover,
 .atalho_pacientes:hover,
-.atalho_agenda:hover{
+.atalho_agenda:hover,
+.atalho_medicos:hover{
     cursor: pointer;
-
     border-color: #303d53;
-
     transform: scale(1.02);
 }
 
 .cadastro_medicos:active,
 .medicos_cadastrados:active,
 .especialidades_procedimentos:active,
+.cadastro_pacientes:active,
+.gerenciar_pacientes:active,
 .atalho_pacientes:active,
-.atalho_agenda:active{
+.atalho_agenda:active,
+.atalho_medicos:active{
     transform: scale(1);
 }
 
 hr{
     width: 100%;
-
     margin: 18px 0 18px 0;
-
     border: 1px solid #d9e2ef;
 }
 
 
 .atalhos_container{
     width: 100%;
-
     display: flex;
     flex-direction: column;
 }
 
 .atalhos_titulo{
     margin: 0 0 8px;
-
     color: #5d6f8a;
-
     font-size: 12px;
-    font-weight: bolder;
-
-    cursor: default;
 }
 
-.atalhos_popup_medicos{
+.atalhos_popup{
     width: 100%;
-
     display: flex;
     flex-wrap: wrap;
-
     gap: 8px;
-
     font-size: 14px;
 }
 
-.atalho_pacientes, .atalho_agenda{
+.atalho_pacientes, .atalho_agenda, .atalho_medicos{
     display: flex;
     align-items: center;
-
     gap: 10px;
-
-    width: 100%;
-
+    flex: 1;
+    min-width: 130px;
     border: 1px solid #d9e2ef;
     border-radius: 10px;
-
     padding: 10px 12px;
-
     cursor: pointer;
-
     font-weight: 700;
-
     border: 1px solid #d9e2ef;
-
     background-color: #f5f8fc;
     color: #303d53;
-
     transition: all 0.2s ease;
 }
 
 .icone-atalhos{
     width: 18px;
     height: 18px;
-    
     color: #303d53;
-}
-
-.link_pacientes{
-    text-decoration: none;
-
-    flex: 1;
-}
-
-.link_agenda{
-    text-decoration: none;
-
-    flex: 1;
 }

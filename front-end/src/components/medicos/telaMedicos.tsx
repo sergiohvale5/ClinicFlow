@@ -1,4 +1,4 @@
-import "../../styles/medicos/telaMedicos.css";
+import "../../styles/medicos/popupMedicos_pacientes.css";
 import { Link } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoCalendarClearOutline } from "react-icons/io5";
@@ -12,7 +12,7 @@ function TelaMedicos({ onFechar }: TelaMedicosProps){
     return(
         <>
             <div className="sobreposicao">
-                <div className="tela_medicos">
+                <div className="popup_medicos">
                     <h2 className="titulo_medico">
                         Médicos
 
