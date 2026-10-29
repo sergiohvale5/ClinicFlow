@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layouts from "../layout/layout";
-import TelaPacientes from "../components/pacientes/telaPacientes";
 import TelaAgendas from "../components/agendas/telaAgendas";
+import TelaPacientes from "../components/pacientes/telaPacientes";
 import TelaMedicosCadastrados from "../components/medicos/telaMedicosCadastrados";
+
 
 function AppPages(){
     return(
@@ -13,7 +14,7 @@ function AppPages(){
                         <Route index element={<TelaAgendas />} />
                         <Route path="agendamentos" element={<TelaAgendas />}/>
                         <Route path="pacientes" element={<TelaPacientes />}/>
-                        <Route path="medicos_cadastrados" element={<TelaMedicosCadastrados />}/>
+                        <Route path="medicos_cadastrados"element={<TelaMedicosCadastrados />}/>
                     </Route>
                 </Routes>
             </BrowserRouter>

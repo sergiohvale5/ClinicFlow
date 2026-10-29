@@ -1,0 +1,199 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.sobreposicao_cadastro_medicos {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 9999;
+
+    background-color: #060c1a8c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela_cadastro_medicos{
+    width: 100%;
+    max-width: 560px;
+
+    padding: 22px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 16px;
+
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    
+    gap: 13px;
+}
+
+.texto_cadastrar_medicos{
+    color: #1b2041;
+
+    font-size: 18px;
+
+    cursor: default;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inpust_cadastros{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 5px;
+
+    flex: 1;
+}
+
+.nova_especialidade,
+.novo_procedimento{
+    color: #3f6ea8;
+
+    font-size: 12px;
+    font-weight: bolder;
+
+    cursor: pointer;
+}
+
+.texto{
+    color: #5d6f8a;
+
+    font-size: 12px;
+    font-weight: bolder;
+
+    cursor: default;
+}
+
+.input,
+.select{
+    width: 100%;
+
+    padding: 9px 11px;
+
+    background-color: #f5f8fc;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 8px;
+
+    outline: 0px;
+}
+
+.input_termino_atendimento{
+    width: 50%;
+
+    padding: 9px 11px;
+
+    background-color: #f5f8fc;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 8px;
+
+    outline: 0px;
+}
+
+.dados_profissionais{
+    display: flex;
+
+    gap: 10px;
+}
+
+.procedimentos_checkbox{
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.procedimentos{
+    display: flex;
+    
+    gap: 10px;
+}
+
+.checkbox{
+    color: #1b2a41;
+
+    font-size: 13px;
+
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.cancelar_salvar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.cancelar{
+    width: 100%;
+    max-width: 94.91px;
+
+    color: #1b2a41;
+
+    font-size: 14px;
+    font-weight: bolder;
+
+    padding: 9px 16px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.2s ease;
+}
+
+.salvar{
+    width: 100%;
+    max-width: 74.17px;
+
+    background-color: #3f6ea8;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: bolder;
+
+    padding: 9px 16px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.2s ease;
+}
+
+.cancelar:hover,
+.salvar:hover{
+    transform: scale(1.03);
+
+    cursor: pointer;
+}
+
+.cancelar:active,
+.salvar:active{
+    transform: scale(1);
+}

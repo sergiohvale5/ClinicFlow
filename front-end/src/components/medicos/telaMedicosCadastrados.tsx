@@ -1,6 +1,14 @@
 import "../../styles/medicos/telaMedicosCadastrados.css";
+import { useOutletContext } from "react-router-dom";
+
+interface TelaMedicosContext {
+    onAbrirPopupEspecialidadesProcedimentos: () => void;
+    onAbrirCadastrosMedicos: () => void;
+}
 
 function TelaMedicosCadastrados(){
+    const {onAbrirPopupEspecialidadesProcedimentos, onAbrirCadastrosMedicos} = useOutletContext<TelaMedicosContext>();
+
     return(
         <>
             <div className="TelaMedicosCadastrados">
@@ -12,11 +20,11 @@ function TelaMedicosCadastrados(){
                     </div>
 
                     <div className="btn_atalhos">
-                        <button className="btn_especialidades_procedimentos">
+                        <button className="btn_especialidades_procedimentos" onClick={onAbrirPopupEspecialidadesProcedimentos}> 
                             Especialidades e procedimentos
                         </button>
 
-                        <button className="btn_cadastrar_medicos">
+                        <button className="btn_cadastrar_medicos" onClick={onAbrirCadastrosMedicos}>
                             Cadastrar médico
                         </button>
                     </div>
@@ -51,7 +59,7 @@ function TelaMedicosCadastrados(){
                         <span>4</span>
 
                         <div className="btn_editar_excluir">
-                            <button className="btn_editar">Editar</button>
+                            <button className="btn_editar" onClick={onAbrirCadastrosMedicos}>Editar</button>
 
                             <button className="btn_excluir">Excluir</button>
                         </div>

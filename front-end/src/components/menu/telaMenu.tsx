@@ -10,10 +10,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 interface TelaMenuProps {
-    onAbrirMedicos: () => void;
+    onAbrirPopupMedicos: () => void;
 }
 
-function TelaMenu({ onAbrirMedicos }: TelaMenuProps){
+function TelaMenu({ onAbrirPopupMedicos }: TelaMenuProps){
     const [efeitoMenu, setEfeitoMenu] = useState<boolean>(false);
     const [modoEscuro, setModoEscuro] = useState<boolean>(false);
 
@@ -51,7 +51,7 @@ function TelaMenu({ onAbrirMedicos }: TelaMenuProps){
                     </div>
                 </Link>
 
-                <div className={modoEscuro ? "menu_medicos_noturno" : "menu_medicos"} onClick={onAbrirMedicos}>
+                <div className={modoEscuro ? "menu_medicos_noturno" : "menu_medicos"} onClick={onAbrirPopupMedicos}>
                     <LuStethoscope className="icon_medico" />
 
                     {!efeitoMenu ? <></> : <span>Médicos</span>}

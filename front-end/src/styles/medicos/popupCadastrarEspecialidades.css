@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.sobreposicao_popup_cadastrar_especialidades{
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    inset: 0px;
+
+    z-index: 999999;
+
+    background-color: #060c1a8c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_cadastrar_especialidades{
+    width: 100%;
+    max-width: 560px;
+
+    padding: 22px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 16px;
+
+    background-color: #ffffff;
+
+    cursor: default;
+
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+
+.titulo_cadastrar_especialidade{
+    color: #1b2a41;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nome_input_especialidade{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+
+    gap: 5px;
+}
+
+.nome_especialidade{
+    color: #5d6f8a;
+
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.input_especialidade{
+    width: 100%;
+
+    background-color: #f5f8fc;
+
+    padding: 9px 11px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 9px;
+
+    outline: 0px;
+}
+
+.calcelar_salvar_popup{
+    width: 100%;
+
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    gap: 8px;
+}
+
+.cancelar_popup{
+    width: 100%;
+    max-width: 94.91px;
+
+    color: #1b2a41;
+
+    background-color: #ffffff;
+
+    font-size: 14px;
+    font-weight: bolder;
+
+    padding: 9px 16px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 8px;
+
+    transition: all 0.2s ease;
+}
+
+.salvar_popup{
+    width: 100%;
+    max-width: 74.17px;
+
+    color: #ffffff;
+
+    background-color: #3f6ea8;
+
+    font-size: 14px;
+    font-weight: bolder;
+
+    padding: 9px 16px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 8px;
+
+    transition: all 0.2s ease;
+}
+
+.cancelar_popup:hover,
+.salvar_popup:hover{
+    transform: scale(1.03);
+
+    cursor: pointer;
+}
+
+.cancelar_popup:active,
+.salvar_popup:active{
+    transform: scale(1);
+}
