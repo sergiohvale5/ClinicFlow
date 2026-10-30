@@ -1,4 +1,4 @@
-import "../../styles/medicos/popupMedicos.css";
+import "../../styles/medicos/popupMedicos_Pacientes.css";
 import { Link } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoCalendarClearOutline } from "react-icons/io5";
