@@ -1,0 +1,445 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.sobreposicao_popup_especialidades_procedimentos{
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 99999;
+
+    background-color: #060c1a8c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_especialidades_procedimentos{
+    width: 100%;
+    max-width: 900px;
+
+    padding: 22px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 16px;
+
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+
+.titulo_especialidades_proceedimentos{
+    color: #1b2a41;
+
+    cursor: default;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn_especialidades_procedimentos_cadastroEspecialidades{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btns_especialidades_procedimentos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.btn_especialidades_0{
+    width: 100%;
+    max-width: 131.88px;
+
+    color: #ffffff;
+
+    background-color: #3f6ea8;
+
+    font-size: 14px;
+    font-weight: bolder;
+
+    padding: 6px 14px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 15px;
+    
+    outline: 0px;
+
+    transition: all 0.2s ease;
+}
+
+.btn_especialidades_1{
+    width: 100%;
+    max-width: 131.88px;
+
+    color: #5d6f8a;
+
+    background-color: #ffffff;
+
+    font-size: 14px;
+    font-weight: bolder;
+
+    padding: 6px 14px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 15px;
+    
+    outline: 0px;
+
+    transition: all 0.2s ease;
+}
+
+.btn_procedimentos_0{
+    width: 100%;
+    max-width: 131.88px;
+
+    color: #ffffff;
+
+    background-color: #3f6ea8;
+
+    font-size: 14px;
+    font-weight: bolder;
+
+    padding: 6px 14px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 15px;
+    
+    outline: 0px;
+
+    transition: all 0.2s ease;
+}
+
+.btn_procedimentos_1{
+    width: 100%;
+    max-width: 131.88px;
+
+    color: #5d6f8a;
+
+    background-color: #ffffff;
+
+    font-size: 14px;
+    font-weight: bolder;
+
+    padding: 6px 14px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 15px;
+    
+    outline: 0px;
+
+    transition: all 0.2s ease;
+}
+
+.btn_cadastroEspecialidades,
+.btn_cadastroProcedimentos{
+    width: 100%;
+    max-width: 170px;
+
+    color: #ffffff;
+
+    background-color: #3f6ea8;
+
+    font-size: 12px;
+    font-weight: bolder;
+
+    padding: 5px 10px;
+
+    border: 0px;
+    border-radius: 8px;
+
+    outline: 0px;
+
+    transition: all 0.2s ease;
+}
+
+.btn_especialidades_0:hover,
+.btn_procedimentos_0:hover,
+.btn_cadastroEspecialidades:hover,
+.btn_cadastroProcedimentos:hover{
+    transform: scale(1.03);
+
+    cursor: pointer;
+}
+
+.btn_especialidades_0:active,
+.btn_procedimentos_0:active,
+.btn_cadastroEspecialidades:active,
+.btn_cadastroProcedimentos:active{
+    transform: scale(1);
+}
+
+.btn_especialidades_1:hover,
+.btn_procedimentos_1:hover{
+    transform: scale(1.03);
+
+    cursor: pointer;
+}
+
+.btn_especialidades_1:active,
+.btn_procedimentos_1:active{
+    transform: scale(1);
+}
+
+.tabela_especialidades {
+    width: 100%;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    cursor: default;
+}
+
+.dados_especialidades,
+.dados {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr 1fr 0.8fr 1.8fr;
+
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 16px;
+}
+
+.dados_especialidades {
+    background-color: #f5f8fc;
+
+    color: #5d6f8a;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    border-bottom: 1px solid #d9e2ef;
+}
+
+.dados {
+    background-color: #ffffff;
+
+    color: #1b2a41;
+
+    font-size: 13px;
+
+    transition: background-color 0.2s ease;
+}
+
+.dados > span {
+    min-width: 0;
+}
+
+.situacao_especialidade {
+    width: fit-content;
+
+    padding: 5px 10px;
+
+    color: #247a4b;
+    background-color: #e5f6ec;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.acoes_especialidades {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.acoes_especialidades button {
+    padding: 6px 8px;
+
+    background-color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.btn_editar_especialidade {
+    color: #3f6ea8;
+}
+
+.btn_inativar_especialidade {
+    color: #9a6700;
+}
+
+.btn_excluir_especialidade {
+    color: #c0392b;
+}
+
+.acoes_especialidades button:hover {
+    transform: scale(1.03);
+
+    background-color: #f5f8fc;
+}
+
+.acoes_especialidades button:active {
+    transform: scale(1);
+}
+
+.tabela_procedimentos {
+    width: 100%;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.dados_cabecalho_procedimentos,
+.dados_linha_procedimentos {
+    display: grid;
+    grid-template-columns: 1.2fr 1.3fr 0.6fr 0.7fr 0.8fr 1.8fr;
+
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 16px;
+}
+
+.dados_cabecalho_procedimentos {
+    color: #5d6f8a;
+    background-color: #f5f8fc;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    border-bottom: 1px solid #d9e2ef;
+}
+
+.dados_linha_procedimentos {
+    color: #1b2a41;
+    background-color: #ffffff;
+
+    font-size: 13px;
+
+    transition: background-color 0.2s ease;
+}
+
+.dados_linha_procedimentos > span {
+    min-width: 0;
+}
+
+.situacao_procedimento {
+    width: fit-content;
+
+    padding: 5px 10px;
+
+    color: #247a4b;
+    background-color: #e5f6ec;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.acoes_procedimentos {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.acoes_procedimentos button {
+    padding: 6px 8px;
+
+    background-color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.btn_editar_procedimento {
+    color: #3f6ea8;
+}
+
+.btn_inativar_procedimento {
+    color: #9a6700;
+}
+
+.btn_excluir_procedimento {
+    color: #c0392b;
+}
+
+.acoes_procedimentos button:hover {
+    transform: scale(1.03);
+
+    background-color: #f5f8fc;
+}
+
+.acoes_procedimentos button:active {
+    transform: scale(1);
+}
+
+.fechar_popup_especialidades_procedimentos{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.btn_cancelar_popup_especialidades_procedimentos{
+    width: 100%;
+    max-width: 80.02px;
+
+    color: #1b2a41;
+
+    font-size: 14px;
+    font-weight: bolder;
+
+    padding: 9px 16px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 10px;
+
+    transition: all 0.2s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_cancelar_popup_especialidades_procedimentos:hover{
+    transform: scale(1.03);
+    
+    background-color: #f5f8fc;
+
+    cursor: pointer;
+}
+
+.btn_cancelar_popup_especialidades_procedimentos:active{
+    transform: scale(1);
+}

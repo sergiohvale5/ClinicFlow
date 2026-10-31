@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.sobreposicao_popup_cadastrar_procedimento{
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    inset: 0px;
+
+    z-index: 9999999;
+
+    background-color: #060c1a8c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_cadastrar_procedimento{
+    width: 100%;
+    max-width: 560px;
+
+    padding: 22px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 16px;
+
+    background-color: #ffffff;
+
+    cursor: default;
+
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+
+.titulo_cadastrar_procedimento{
+    color: #1b2a41;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nome_input_select_procedimento{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+
+    gap: 10px;
+}
+
+.nome_inpur_procedimento,
+.nome_select_procedimento{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+
+    gap: 5px;
+}
+
+.nome_procedimento,
+.nome_procedimento{
+    color: #5d6f8a;
+
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.input_procedimento,
+.select_procedimento{
+    width: 100%;
+
+    background-color: #f5f8fc;
+
+    padding: 9px 11px;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 9px;
+
+    outline: 0px;
+}
+
+/*
+    Toda estrutura de código de estilização dos botões cancelar e salvar se encontra src/style/medicos/popupCadastrarEspecialidades.css
+*/

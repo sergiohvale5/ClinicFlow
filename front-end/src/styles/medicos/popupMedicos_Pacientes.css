@@ -1,0 +1,266 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.sobreposicao{
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+
+    background-color: #060c1a8c;
+
+    padding: 16px;
+
+    z-index: 5;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_medicos, .popup_pacientes{
+    width: 100%;
+    max-width: 560px;
+
+    background-color: #ffffff;
+    color: #1b2a41;
+
+    border: 1px solid #d9e2ef;
+    border-radius: 16px;
+
+    padding: 22px;
+
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.titulo_medico , .titulo_paciente{
+    margin: 0 0 14px;
+
+    font-size: 18px;
+
+    cursor: default;
+}
+
+.fechar_popup{
+    align-self: flex-end;
+
+    border: none;
+
+    background: transparent;
+
+    color: #303d53;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.fechar_popup:hover{
+    transform: scale(1.03);
+}
+
+.cadastroMedicos_medicosCadastrados, 
+.cadastrarPacientes_gerenciarPacientes{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.cadastro_medicos, 
+.cadastro_pacientes{
+    flex: 1;
+
+    height: 80px;
+
+    padding: 22px;
+
+    border-radius: 14px;
+    border: 1px solid #d9e2ef;
+
+    background-color: #f5f8fc;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    gap: 3px;
+
+    transition: all 0.2s ease;
+}
+
+.cadastro_medicos h2, 
+.cadastro_pacientes h2{
+    color: #303d53;
+
+    font-size: 18px;
+}
+
+.cadastro_medicos span, 
+.cadastro_pacientes span{
+    color: #5d6f8a;
+
+    font-size: 11px;
+}
+
+
+.medicos_cadastrados, 
+.gerenciar_pacientes{
+    flex: 1;
+
+    height: 80px;
+
+    padding: 22px;
+
+    border-radius: 14px;
+    border: 1px solid #d9e2ef;
+
+    background-color: #f5f8fc;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    gap: 3px;
+
+    transition: all 0.2s ease;
+}
+
+.medicos_cadastrados h2, 
+.gerenciar_pacientes h2{
+    color: #303d53;
+
+    font-size: 18px;
+}
+
+.medicos_cadastrados span, 
+.gerenciar_pacientes span{
+    color: #5d6f8a;
+
+    font-size: 11px;
+}
+
+.especialidades_procedimentos{
+    width: 100%;
+
+    height: 84px;
+
+    padding: 22px;
+
+    margin-top: 5px;
+
+    border-radius: 14px;
+    border: 1px solid #d9e2ef;
+
+    background-color: #f5f8fc;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    gap: 3px;
+
+    transition: all 0.2s ease;
+}
+
+.especialidades_procedimentos h2{
+    color: #303d53;
+
+    font-size: 18px;
+}
+
+.especialidades_procedimentos span{
+    color: #5d6f8a;
+
+    font-size: 11px;
+}
+
+.cadastro_medicos:hover,
+.medicos_cadastrados:hover,
+.especialidades_procedimentos:hover,
+.cadastro_pacientes:hover,
+.gerenciar_pacientes:hover,
+.atalho_pacientes:hover,
+.atalho_agenda:hover,
+.atalho_medicos:hover{
+    cursor: pointer;
+    border-color: #303d53;
+    transform: scale(1.02);
+}
+
+.cadastro_medicos:active,
+.medicos_cadastrados:active,
+.especialidades_procedimentos:active,
+.cadastro_pacientes:active,
+.gerenciar_pacientes:active,
+.atalho_pacientes:active,
+.atalho_agenda:active,
+.atalho_medicos:active{
+    transform: scale(1);
+}
+
+hr{
+    width: 100%;
+    margin: 18px 0 18px 0;
+    border: 1px solid #d9e2ef;
+}
+
+
+.atalhos_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.atalhos_titulo{
+    margin: 0 0 8px;
+    color: #5d6f8a;
+    font-size: 12px;
+}
+
+.atalhos_popup{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.atalho_pacientes, .atalho_agenda, .atalho_medicos{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 130px;
+    border: 1px solid #d9e2ef;
+    border-radius: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-weight: 700;
+    border: 1px solid #d9e2ef;
+    background-color: #f5f8fc;
+    color: #303d53;
+    transition: all 0.2s ease;
+}
+
+.icone-atalhos{
+    width: 18px;
+    height: 18px;
+    color: #303d53;
+}
