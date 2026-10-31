@@ -1,0 +1,297 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.telaMenuAberta,
+.telaMenuAbertaNoturno{
+    width: 232px;
+    min-width: 232px;
+    height: 100vh;
+    height: 100dvh;
+
+    padding: 20px 14px;
+
+    gap: 6px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.2s ease;
+}
+
+.telaMenuAberta{
+    background-color: #c9d8ec;
+}
+
+.telaMenuAbertaNoturno{
+    background-color: #0c1830;
+}
+
+.telaMenuFechada,
+.telaMenuFechadaNoturno{
+    width: 70px;
+    min-width: 70px;
+    height: 100vh;
+    height: 100dvh;
+
+    padding: 20px 14px;
+
+    gap: 6px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.2s ease;
+}
+
+.telaMenuFechada{
+    background-color: #c9d8ec;
+}
+
+.telaMenuFechadaNoturno{
+    background-color: #0c1830;
+}
+
+.nome_app,
+.nome_app_noturno{
+    padding: 4px 10px 18px;
+
+    cursor: default;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.nome_app{
+    color: #1f3556;
+}
+
+.nome_app_noturno{
+    color: #b9cdee;
+}
+
+.icone_seta_esquerda,
+.icone_seta_direita{
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.icone_seta_esquerda:hover,
+.icone_seta_direita:hover{
+    transform: scale(1.08);
+}
+
+.icone_seta_esquerda:active,
+.icone_seta_direita:active{
+    transform: scale(1);
+}
+
+.link_menu{
+    width: 100%;
+    text-decoration: none;
+}
+
+.menu_agenda,
+.menu_agenda_noturno,
+.menu_medicos,
+.menu_medicos_noturno,
+.menu_pacientes,
+.menu_pacientes_noturno{
+    width: 100%;
+    max-width: 204px;
+    min-width: 0;
+    height: 41px;
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    padding: 11px 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    transition: all 0.2s ease;
+}
+
+.menu_agenda,
+.menu_medicos,
+.menu_pacientes{
+    color: #1f3556;
+}
+
+.menu_agenda_noturno,
+.menu_medicos_noturno,
+.menu_pacientes_noturno{
+    color: #b9cdee;
+}
+
+.icon_calendario,
+.icon_medico,
+.icon_paciente{
+    width: 19px;
+    height: 19px;
+
+    flex-shrink: 0;
+}
+
+.menu_agenda:hover,
+.menu_medicos:hover,
+.menu_pacientes:hover,
+.menu_agenda_noturno:hover,
+.menu_medicos_noturno:hover,
+.menu_pacientes_noturno:hover{
+    background: color(srgb 0.247059 0.431373 0.658824 / 0.18);
+
+    transform: scale(1.04);
+
+    font-weight: bolder;
+
+    cursor: pointer;
+}
+
+.menu_agenda:active,
+.menu_medicos:active,
+.menu_pacientes:active,
+.menu_agenda_noturno:active,
+.menu_medicos_noturno:active,
+.menu_pacientes_noturno:active{
+    transform: scale(1);
+}
+
+.divisor{
+    width: 100%;
+    flex: 1;
+    min-height: 20px;
+}
+
+.modo_escuro,
+.modo_claro{
+    width: 100%;
+    max-width: 204px;
+    height: 41px;
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    padding: 11px 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    transition: all 0.2s ease;
+}
+
+.modo_escuro{
+    color: #1f3556;
+}
+
+.modo_claro{
+    color: #b9cdee;
+}
+
+.icon_lua,
+.icon_sol{
+    width: 19px;
+    height: 19px;
+
+    flex-shrink: 0;
+}
+
+.modo_escuro:hover,
+.modo_claro:hover{
+    background: color(srgb 0.247059 0.431373 0.658824 / 0.18);
+
+    transform: scale(1.04);
+
+    font-weight: bolder;
+
+    cursor: pointer;
+}
+
+.modo_escuro:active,
+.modo_claro:active{
+    transform: scale(1);
+}
+
+@media screen and (max-width: 768px){
+
+    .telaMenuAberta,
+    .telaMenuAbertaNoturno{
+        width: 210px;
+        min-width: 210px;
+        padding: 18px 12px;
+    }
+
+    .telaMenuFechada,
+    .telaMenuFechadaNoturno{
+        width: 62px;
+        min-width: 62px;
+        padding: 18px 10px;
+    }
+
+    .nome_app,
+    .nome_app_noturno{
+        gap: 16px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    .telaMenuAberta,
+    .telaMenuAbertaNoturno{
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: min(260px, 85vw);
+        min-width: 0;
+        height: 100vh;
+        height: 100dvh;
+
+        z-index: 20;
+
+        box-shadow: 4px 0 20px #00000026;
+    }
+
+    .telaMenuFechada,
+    .telaMenuFechadaNoturno{
+        width: 58px;
+        min-width: 58px;
+
+        padding: 18px 8px;
+    }
+
+    .nome_app,
+    .nome_app_noturno{
+        gap: 12px;
+    }
+
+    .menu_agenda,
+    .menu_agenda_noturno,
+    .menu_medicos,
+    .menu_medicos_noturno,
+    .menu_pacientes,
+    .menu_pacientes_noturno,
+    .modo_escuro,
+    .modo_claro{
+        padding: 10px;
+        font-size: 13px;
+    }
+
+}
