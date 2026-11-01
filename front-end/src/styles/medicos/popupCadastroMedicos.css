@@ -10,6 +10,9 @@
 
     width: 100%;
     height: 100vh;
+    height: 100dvh;
+
+    padding: 16px;
 
     z-index: 9999;
 
@@ -18,11 +21,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow-y: auto;
 }
 
 .tela_cadastro_medicos{
     width: 100%;
     max-width: 560px;
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    min-width: 0;
 
     padding: 22px;
 
@@ -33,8 +41,11 @@
 
     display: flex;
     flex-direction: column;
-    
+
     gap: 13px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .texto_cadastrar_medicos{
@@ -47,15 +58,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    gap: 10px;
 }
 
 .inpust_cadastros{
     display: flex;
     flex-direction: column;
-    
+
     gap: 5px;
 
     flex: 1;
+    min-width: 0;
 }
 
 .nova_especialidade,
@@ -80,6 +94,8 @@
 .input,
 .select{
     width: 100%;
+    min-width: 0;
+    min-height: 38px;
 
     padding: 9px 11px;
 
@@ -89,10 +105,15 @@
     border-radius: 8px;
 
     outline: 0px;
+
+    font-size: 14px;
+    color: #1b2a41;
 }
 
 .input_termino_atendimento{
     width: 50%;
+    min-width: 0;
+    min-height: 38px;
 
     padding: 9px 11px;
 
@@ -102,9 +123,15 @@
     border-radius: 8px;
 
     outline: 0px;
+
+    font-size: 14px;
+    color: #1b2a41;
 }
 
 .dados_profissionais{
+    width: 100%;
+    min-width: 0;
+
     display: flex;
 
     gap: 10px;
@@ -119,7 +146,8 @@
 
 .procedimentos{
     display: flex;
-    
+    flex-wrap: wrap;
+
     gap: 10px;
 }
 
@@ -196,4 +224,73 @@
 .cancelar:active,
 .salvar:active{
     transform: scale(1);
+}
+
+.input:focus,
+.select:focus,
+.input_termino_atendimento:focus{
+    border-color: #3f6ea8;
+}
+
+@media (max-width: 600px){
+
+    .sobreposicao_cadastro_medicos{
+        padding: 12px;
+    }
+
+    .tela_cadastro_medicos{
+        max-height: calc(100vh - 24px);
+        max-height: calc(100dvh - 24px);
+
+        padding: 18px;
+
+        border-radius: 14px;
+    }
+
+    .texto_cadastrar_medicos{
+        font-size: 17px;
+    }
+
+    .dados_profissionais{
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .input_termino_atendimento{
+        width: 100%;
+    }
+
+    .procedimentos{
+        gap: 10px 14px;
+    }
+}
+
+@media (max-width: 360px){
+
+    .sobreposicao_cadastro_medicos{
+        padding: 8px;
+    }
+
+    .tela_cadastro_medicos{
+        max-height: calc(100vh - 16px);
+        max-height: calc(100dvh - 16px);
+
+        padding: 14px;
+    }
+
+    .texto_cadastrar_medicos{
+        font-size: 16px;
+    }
+
+    .input,
+    .select,
+    .input_termino_atendimento{
+        font-size: 13px;
+    }
+
+    .cancelar,
+    .salvar{
+        font-size: 13px;
+        padding: 9px 12px;
+    }
 }

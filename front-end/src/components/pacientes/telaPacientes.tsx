@@ -1,13 +1,24 @@
 import "../../styles/medicos/popupMedicos_Pacientes.css";
 import { LuStethoscope } from "react-icons/lu";
 import { IoCalendarClearOutline } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 
-function TelaPacientes(){
+interface TelaPacientesProps{
+    onFecharPopupPacientes: () => void;
+}
+
+function TelaPacientes({onFecharPopupPacientes}: TelaPacientesProps){
     return(
         <>
             <div className="sobreposicao">
                 <div className="popup_pacientes">
-                    <h2 className="titulo_paciente">Pacientes</h2>
+                    <h2 className="titulo_paciente">
+                        Pacientes
+
+                        <button className="fechar_popup" onClick={onFecharPopupPacientes} aria-label="Fechar pop-up">
+                            <IoClose />
+                        </button>
+                    </h2>
 
                     <div className="cadastrarPacientes_gerenciarPacientes">
                         <div className="cadastro_pacientes">

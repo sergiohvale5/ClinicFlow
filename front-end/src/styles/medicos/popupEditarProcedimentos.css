@@ -7,9 +7,12 @@
 .sobreposicao_popup_editar_procedimentos{
     width: 100%;
     height: 100vh;
+    height: 100dvh;
 
     position: fixed;
     inset: 0px;
+
+    padding: 16px;
 
     z-index: 99999999;
 
@@ -18,11 +21,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow-y: auto;
 }
 
 .popup_editar_procedimentos{
     width: 100%;
     max-width: 560px;
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    min-width: 0;
 
     padding: 22px;
 
@@ -35,8 +43,11 @@
 
     display: flex;
     flex-direction: column;
-    
+
     gap: 10px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .titulo_editar_procedimentos{
@@ -45,9 +56,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    gap: 10px;
 }
 
 .input_select_editar_procedimentos{
+    width: 100%;
+
     display: flex;
     flex-direction: column;
 
@@ -56,6 +71,9 @@
 
 .nome_input_editar_procedimentos,
 .nome_select_editar_procedimentos{
+    width: 100%;
+    min-width: 0;
+
     display: flex;
     flex-direction: column;
 
@@ -63,7 +81,7 @@
 }
 
 .nome_editar_procedimentos,
-.nome_editar_procedimentos{
+.nome_select_editar_procedimentos{
     color: #5d6f8a;
 
     font-size: 12px;
@@ -73,6 +91,8 @@
 .input_editar_procedimentos,
 .select_editar_procedimentos{
     width: 100%;
+    min-width: 0;
+    min-height: 38px;
 
     background-color: #f5f8fc;
 
@@ -82,4 +102,55 @@
     border-radius: 8px;
 
     outline: 0px;
+
+    font-size: 14px;
+    color: #1b2a41;
+}
+
+.input_editar_procedimentos:focus,
+.select_editar_procedimentos:focus{
+    border-color: #3f6ea8;
+}
+
+@media (max-width: 600px){
+
+    .sobreposicao_popup_editar_procedimentos{
+        padding: 12px;
+    }
+
+    .popup_editar_procedimentos{
+        max-height: calc(100vh - 24px);
+        max-height: calc(100dvh - 24px);
+
+        padding: 18px;
+
+        border-radius: 14px;
+    }
+
+    .titulo_editar_procedimentos{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 360px){
+
+    .sobreposicao_popup_editar_procedimentos{
+        padding: 8px;
+    }
+
+    .popup_editar_procedimentos{
+        max-height: calc(100vh - 16px);
+        max-height: calc(100dvh - 16px);
+
+        padding: 14px;
+    }
+
+    .titulo_editar_procedimentos{
+        font-size: 16px;
+    }
+
+    .input_editar_procedimentos,
+    .select_editar_procedimentos{
+        font-size: 13px;
+    }
 }

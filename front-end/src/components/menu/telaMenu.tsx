@@ -11,9 +11,10 @@ import { Link } from "react-router-dom";
 
 interface TelaMenuProps {
     onAbrirPopupMedicos: () => void;
+    onAbrirPopupPacientes: () => void;
 }
 
-function TelaMenu({ onAbrirPopupMedicos }: TelaMenuProps){
+function TelaMenu({ onAbrirPopupMedicos, onAbrirPopupPacientes }: TelaMenuProps){
     const [efeitoMenu, setEfeitoMenu] = useState<boolean>(false);
     const [modoEscuro, setModoEscuro] = useState<boolean>(false);
 
@@ -57,13 +58,13 @@ function TelaMenu({ onAbrirPopupMedicos }: TelaMenuProps){
                     {!efeitoMenu ? <></> : <span>Médicos</span>}
                 </div>
 
-                <Link to="/clinic_flow/pacientes" className="link_menu">
-                    <div className={modoEscuro ? "menu_pacientes_noturno" : "menu_pacientes"}>
-                        <LuUser className="icon_paciente"/>
+                
+                <div className={modoEscuro ? "menu_pacientes_noturno" : "menu_pacientes"} onClick={onAbrirPopupPacientes}>
+                    <LuUser className="icon_paciente"/>
 
-                        {!efeitoMenu ? <></> : <span>Pacientes</span>}
-                    </div>
-                </Link>
+                    {!efeitoMenu ? <></> : <span>Pacientes</span>}
+                </div>
+                
 
                 <span className="divisor"></span>
 

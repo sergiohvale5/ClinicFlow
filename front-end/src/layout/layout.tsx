@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TelaMenu from "../components/menu/telaMenu";
+import { Outlet } from "react-router-dom";
 import PopupMedicos from "../components/medicos/popupMedicos";
 import PopupCadastroMedicos from "../components/medicos/popupCadastroMedicos";
 import PopupEspecialidadesProcedimentos from "../components/medicos/popupEspecialidadesProcedimentos";
@@ -7,9 +8,12 @@ import PopupCadastrarEspecialidades from "../components/medicos/popupCadastrarEs
 import PopupCadastrarProcedimento from "../components/medicos/popupCadastrarProcedimento";
 import PupupEditarEspecialidade from "../components/medicos/popupEditarEspecialidade";
 import PopupEditarProcedimentos from "../components/medicos/popupEditarProcedimentos";
-import { Outlet } from "react-router-dom";
+import TelaPacientes from "../components/pacientes/telaPacientes";
 
 function Layouts() {
+    {
+        /** Médicos */
+    }
     const [popupMedicos, setPopupMedicos] = useState<boolean>(false);
     const [popupCadastrosMedicos, setPopupCadastrosMedicos] = useState<boolean>(false);
     const [popupEspecialidadesProcedimentos, setPopupEspecialidadesProcedimentos] = useState<boolean>(false);
@@ -18,9 +22,17 @@ function Layouts() {
     const [pupupEditarEspecialidade, setPupupEditarEspecialidade] = useState<boolean>(false);
     const [popupEditarProcedimentos, setPopupEditarProcedimentos] = useState<boolean>(false);
 
+    {
+        /** Pacientes */
+    }
+    const [popupPacientes, setPopupPacientes] = useState<boolean>(false);
+
     return (
         <>
-            <TelaMenu onAbrirPopupMedicos={() => setPopupMedicos(true)}/>
+            <TelaMenu 
+                onAbrirPopupMedicos={() => setPopupMedicos(true)}
+                onAbrirPopupPacientes={() => setPopupPacientes(true)}
+            />
 
             <Outlet 
                 context={
@@ -30,6 +42,10 @@ function Layouts() {
                     }
                 }
             />
+
+            {
+                /** Médicos */
+            }
 
             {popupMedicos && (
                 <PopupMedicos 
@@ -92,6 +108,18 @@ function Layouts() {
                     <PopupEditarProcedimentos 
                         onFecharPopupEditarProcedimentos={() => setPopupEditarProcedimentos(false)}
                         onAbrirPopupEspecialidadesProcedimentos={() => setPopupEspecialidadesProcedimentos(true)}
+                    />
+                )
+            }
+
+            {
+                /** Pacientes */
+            }
+            
+            {
+                popupPacientes && (
+                    <TelaPacientes 
+                        onFecharPopupPacientes={() => setPopupPacientes(false)}
                     />
                 )
             }

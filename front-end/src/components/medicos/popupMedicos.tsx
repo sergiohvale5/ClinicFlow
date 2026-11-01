@@ -22,6 +22,7 @@ function PopupMedicos({ onFecharPopupMedicos, onAbrirCadastrosMedicos, onAbrirPo
                             <IoClose />
                         </button>
                     </h2>
+                    
 
                     <div className="cadastroMedicos_medicosCadastrados">
                         <div className="cadastro_medicos" onClick={() => {onFecharPopupMedicos(); onAbrirCadastrosMedicos()}}>
