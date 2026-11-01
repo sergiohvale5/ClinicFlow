@@ -10,6 +10,9 @@
 
     width: 100%;
     height: 100vh;
+    height: 100dvh;
+
+    padding: 16px;
 
     z-index: 99999;
 
@@ -18,11 +21,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .popup_especialidades_procedimentos{
     width: 100%;
     max-width: 900px;
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    min-width: 0;
 
     padding: 22px;
 
@@ -33,8 +42,13 @@
 
     display: flex;
     flex-direction: column;
-    
+
     gap: 10px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
 }
 
 .titulo_especialidades_proceedimentos{
@@ -45,14 +59,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    gap: 12px;
+    flex-shrink: 0;
 }
 
 .btn_especialidades_procedimentos_cadastroEspecialidades{
     width: 100%;
+    min-width: 0;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .btns_especialidades_procedimentos{
@@ -61,78 +82,19 @@
     align-items: center;
 
     gap: 10px;
+
+    min-width: 0;
+    flex-wrap: wrap;
 }
 
-.btn_especialidades_0{
-    width: 100%;
-    max-width: 131.88px;
-
-    color: #ffffff;
-
-    background-color: #3f6ea8;
-
-    font-size: 14px;
-    font-weight: bolder;
-
-    padding: 6px 14px;
-
-    border: 1px solid #d9e2ef;
-    border-radius: 15px;
-    
-    outline: 0px;
-
-    transition: all 0.2s ease;
-}
-
-.btn_especialidades_1{
-    width: 100%;
-    max-width: 131.88px;
-
-    color: #5d6f8a;
-
-    background-color: #ffffff;
-
-    font-size: 14px;
-    font-weight: bolder;
-
-    padding: 6px 14px;
-
-    border: 1px solid #d9e2ef;
-    border-radius: 15px;
-    
-    outline: 0px;
-
-    transition: all 0.2s ease;
-}
-
-.btn_procedimentos_0{
-    width: 100%;
-    max-width: 131.88px;
-
-    color: #ffffff;
-
-    background-color: #3f6ea8;
-
-    font-size: 14px;
-    font-weight: bolder;
-
-    padding: 6px 14px;
-
-    border: 1px solid #d9e2ef;
-    border-radius: 15px;
-    
-    outline: 0px;
-
-    transition: all 0.2s ease;
-}
-
+.btn_especialidades_0,
+.btn_especialidades_1,
+.btn_procedimentos_0,
 .btn_procedimentos_1{
     width: 100%;
     max-width: 131.88px;
-
-    color: #5d6f8a;
-
-    background-color: #ffffff;
+    min-width: 0;
+    min-height: 34px;
 
     font-size: 14px;
     font-weight: bolder;
@@ -141,16 +103,33 @@
 
     border: 1px solid #d9e2ef;
     border-radius: 15px;
-    
+
     outline: 0px;
 
+    white-space: nowrap;
+
     transition: all 0.2s ease;
+}
+
+.btn_especialidades_0,
+.btn_procedimentos_0{
+    color: #ffffff;
+
+    background-color: #3f6ea8;
+}
+
+.btn_especialidades_1,
+.btn_procedimentos_1{
+    color: #5d6f8a;
+
+    background-color: #ffffff;
 }
 
 .btn_cadastroEspecialidades,
 .btn_cadastroProcedimentos{
     width: 100%;
     max-width: 170px;
+    min-height: 34px;
 
     color: #ffffff;
 
@@ -172,7 +151,9 @@
 .btn_especialidades_0:hover,
 .btn_procedimentos_0:hover,
 .btn_cadastroEspecialidades:hover,
-.btn_cadastroProcedimentos:hover{
+.btn_cadastroProcedimentos:hover,
+.btn_especialidades_1:hover,
+.btn_procedimentos_1:hover{
     transform: scale(1.03);
 
     cursor: pointer;
@@ -181,37 +162,38 @@
 .btn_especialidades_0:active,
 .btn_procedimentos_0:active,
 .btn_cadastroEspecialidades:active,
-.btn_cadastroProcedimentos:active{
-    transform: scale(1);
-}
-
-.btn_especialidades_1:hover,
-.btn_procedimentos_1:hover{
-    transform: scale(1.03);
-
-    cursor: pointer;
-}
-
+.btn_cadastroProcedimentos:active,
 .btn_especialidades_1:active,
 .btn_procedimentos_1:active{
     transform: scale(1);
 }
 
-.tabela_especialidades {
+.tabela_especialidades,
+.tabela_procedimentos{
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
 
     border: 1px solid #d9e2ef;
     border-radius: 10px;
 
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
 
     cursor: default;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #9aacc4 #f5f8fc;
 }
 
 .dados_especialidades,
-.dados {
+.dados{
+    width: 100%;
+    min-width: 850px;
+
     display: grid;
-    grid-template-columns: 1.5fr 0.7fr 1fr 0.8fr 1.8fr;
+    grid-template-columns: minmax(160px, 1.5fr) minmax(90px, 0.7fr) minmax(120px, 1fr) minmax(100px, 0.8fr) minmax(220px, 1.8fr);
 
     align-items: center;
     gap: 12px;
@@ -219,7 +201,7 @@
     padding: 14px 16px;
 }
 
-.dados_especialidades {
+.dados_especialidades{
     background-color: #f5f8fc;
 
     color: #5d6f8a;
@@ -230,7 +212,7 @@
     border-bottom: 1px solid #d9e2ef;
 }
 
-.dados {
+.dados{
     background-color: #ffffff;
 
     color: #1b2a41;
@@ -238,13 +220,22 @@
     font-size: 13px;
 
     transition: background-color 0.2s ease;
+
+    border-bottom: 1px solid #e8edf4;
 }
 
-.dados > span {
+.dados:last-child{
+    border-bottom: 0px;
+}
+
+.dados > span,
+.dados_especialidades > span{
     min-width: 0;
+
+    overflow-wrap: anywhere;
 }
 
-.situacao_especialidade {
+.situacao_especialidade{
     width: fit-content;
 
     padding: 5px 10px;
@@ -256,15 +247,24 @@
 
     font-size: 11px;
     font-weight: bold;
+
+    white-space: nowrap;
 }
 
-.acoes_especialidades {
+.acoes_especialidades,
+.acoes_procedimentos{
     display: flex;
     align-items: center;
+
     gap: 6px;
+
+    min-width: 0;
 }
 
-.acoes_especialidades button {
+.acoes_especialidades button,
+.acoes_procedimentos button{
+    min-height: 30px;
+
     padding: 6px 8px;
 
     background-color: #ffffff;
@@ -277,44 +277,47 @@
 
     cursor: pointer;
 
+    white-space: nowrap;
+
+    flex-shrink: 0;
+
     transition: all 0.2s ease;
 }
 
-.btn_editar_especialidade {
+.btn_editar_especialidade,
+.btn_editar_procedimento{
     color: #3f6ea8;
 }
 
-.btn_inativar_especialidade {
+.btn_inativar_especialidade,
+.btn_inativar_procedimento{
     color: #9a6700;
 }
 
-.btn_excluir_especialidade {
+.btn_excluir_especialidade,
+.btn_excluir_procedimento{
     color: #c0392b;
 }
 
-.acoes_especialidades button:hover {
+.acoes_especialidades button:hover,
+.acoes_procedimentos button:hover{
     transform: scale(1.03);
 
     background-color: #f5f8fc;
 }
 
-.acoes_especialidades button:active {
+.acoes_especialidades button:active,
+.acoes_procedimentos button:active{
     transform: scale(1);
-}
-
-.tabela_procedimentos {
-    width: 100%;
-
-    border: 1px solid #d9e2ef;
-    border-radius: 10px;
-
-    overflow: hidden;
 }
 
 .dados_cabecalho_procedimentos,
-.dados_linha_procedimentos {
+.dados_linha_procedimentos{
+    width: 100%;
+    min-width: 1050px;
+
     display: grid;
-    grid-template-columns: 1.2fr 1.3fr 0.6fr 0.7fr 0.8fr 1.8fr;
+    grid-template-columns: minmax(140px, 1.2fr) minmax(150px, 1.3fr) minmax(75px, 0.6fr) minmax(85px, 0.7fr) minmax(100px, 0.8fr) minmax(220px, 1.8fr);
 
     align-items: center;
     gap: 12px;
@@ -322,7 +325,7 @@
     padding: 14px 16px;
 }
 
-.dados_cabecalho_procedimentos {
+.dados_cabecalho_procedimentos{
     color: #5d6f8a;
     background-color: #f5f8fc;
 
@@ -332,20 +335,29 @@
     border-bottom: 1px solid #d9e2ef;
 }
 
-.dados_linha_procedimentos {
+.dados_linha_procedimentos{
     color: #1b2a41;
     background-color: #ffffff;
 
     font-size: 13px;
 
     transition: background-color 0.2s ease;
+
+    border-bottom: 1px solid #e8edf4;
 }
 
-.dados_linha_procedimentos > span {
+.dados_linha_procedimentos:last-child{
+    border-bottom: 0px;
+}
+
+.dados_linha_procedimentos > span,
+.dados_cabecalho_procedimentos > span{
     min-width: 0;
+
+    overflow-wrap: anywhere;
 }
 
-.situacao_procedimento {
+.situacao_procedimento{
     width: fit-content;
 
     padding: 5px 10px;
@@ -357,61 +369,23 @@
 
     font-size: 11px;
     font-weight: bold;
-}
 
-.acoes_procedimentos {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.acoes_procedimentos button {
-    padding: 6px 8px;
-
-    background-color: #ffffff;
-
-    font-size: 11px;
-    font-weight: 600;
-
-    border: 1px solid #d9e2ef;
-    border-radius: 6px;
-
-    cursor: pointer;
-
-    transition: all 0.2s ease;
-}
-
-.btn_editar_procedimento {
-    color: #3f6ea8;
-}
-
-.btn_inativar_procedimento {
-    color: #9a6700;
-}
-
-.btn_excluir_procedimento {
-    color: #c0392b;
-}
-
-.acoes_procedimentos button:hover {
-    transform: scale(1.03);
-
-    background-color: #f5f8fc;
-}
-
-.acoes_procedimentos button:active {
-    transform: scale(1);
+    white-space: nowrap;
 }
 
 .fechar_popup_especialidades_procedimentos{
     display: flex;
     justify-content: end;
     align-items: center;
+
+    width: 100%;
+    flex-shrink: 0;
 }
 
 .btn_cancelar_popup_especialidades_procedimentos{
     width: 100%;
     max-width: 80.02px;
+    min-height: 38px;
 
     color: #1b2a41;
 
@@ -434,7 +408,7 @@
 
 .btn_cancelar_popup_especialidades_procedimentos:hover{
     transform: scale(1.03);
-    
+
     background-color: #f5f8fc;
 
     cursor: pointer;
@@ -442,4 +416,195 @@
 
 .btn_cancelar_popup_especialidades_procedimentos:active{
     transform: scale(1);
+}
+
+@media (max-width: 1024px){
+    .sobreposicao_popup_especialidades_procedimentos{
+        padding: 14px;
+    }
+
+    .popup_especialidades_procedimentos{
+        padding: 20px;
+
+        max-height: calc(100dvh - 28px);
+    }
+
+    .dados_especialidades,
+    .dados{
+        gap: 10px;
+
+        padding: 12px 14px;
+    }
+
+    .dados_cabecalho_procedimentos,
+    .dados_linha_procedimentos{
+        gap: 10px;
+
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 768px){
+    .sobreposicao_popup_especialidades_procedimentos{
+        padding: 12px;
+    }
+
+    .popup_especialidades_procedimentos{
+        max-height: calc(100dvh - 24px);
+
+        padding: 18px;
+
+        border-radius: 14px;
+
+        gap: 12px;
+    }
+
+    .btn_especialidades_procedimentos_cadastroEspecialidades{
+        align-items: stretch;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .btns_especialidades_procedimentos{
+        width: 100%;
+
+        justify-content: flex-start;
+    }
+
+    .btn_cadastroEspecialidades,
+    .btn_cadastroProcedimentos{
+        max-width: none;
+
+        min-height: 38px;
+    }
+
+    .dados_especialidades,
+    .dados{
+        min-width: 850px;
+
+        padding: 12px;
+    }
+
+    .dados_cabecalho_procedimentos,
+    .dados_linha_procedimentos{
+        min-width: 1050px;
+
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px){
+    .sobreposicao_popup_especialidades_procedimentos{
+        padding: 8px;
+    }
+
+    .popup_especialidades_procedimentos{
+        max-height: calc(100dvh - 16px);
+
+        padding: 14px;
+
+        border-radius: 12px;
+
+        gap: 10px;
+    }
+
+    .titulo_especialidades_proceedimentos{
+        font-size: 16px;
+
+        gap: 8px;
+    }
+
+    .btns_especialidades_procedimentos{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .btn_especialidades_0,
+    .btn_especialidades_1,
+    .btn_procedimentos_0,
+    .btn_procedimentos_1{
+        max-width: none;
+
+        width: 100%;
+
+        font-size: 12px;
+
+        padding: 8px 6px;
+    }
+
+    .btn_cadastroEspecialidades,
+    .btn_cadastroProcedimentos{
+        width: 100%;
+        max-width: none;
+
+        min-height: 40px;
+
+        font-size: 12px;
+    }
+
+    .dados_especialidades,
+    .dados{
+        min-width: 850px;
+
+        font-size: 12px;
+
+        padding: 12px 10px;
+    }
+
+    .dados_cabecalho_procedimentos,
+    .dados_linha_procedimentos{
+        min-width: 1050px;
+
+        font-size: 12px;
+
+        padding: 12px 10px;
+    }
+
+    .acoes_especialidades,
+    .acoes_procedimentos{
+        gap: 5px;
+    }
+
+    .acoes_especialidades button,
+    .acoes_procedimentos button{
+        padding: 7px 8px;
+
+        font-size: 11px;
+    }
+
+    .btn_cancelar_popup_especialidades_procedimentos{
+        max-width: none;
+
+        min-height: 40px;
+    }
+}
+
+@media (max-height: 500px){
+    .sobreposicao_popup_especialidades_procedimentos{
+        align-items: flex-start;
+    }
+
+    .popup_especialidades_procedimentos{
+        margin: auto 0;
+
+        max-height: calc(100dvh - 24px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .btn_especialidades_0,
+    .btn_especialidades_1,
+    .btn_procedimentos_0,
+    .btn_procedimentos_1,
+    .btn_cadastroEspecialidades,
+    .btn_cadastroProcedimentos,
+    .acoes_especialidades button,
+    .acoes_procedimentos button,
+    .btn_cancelar_popup_especialidades_procedimentos{
+        transition: none;
+    }
 }

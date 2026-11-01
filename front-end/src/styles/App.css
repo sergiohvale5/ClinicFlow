@@ -7,7 +7,27 @@
     font-family: Manrope, Arial, sans-serif;
 }
 
+html, body, #root{
+    width: 100%;
+    min-height: 100%;
+}
+
+body{
+    min-width: 320px;
+}
+
+#root{
+    min-height: 100vh;
+}
+
 .app{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    min-width: 0;
+}
+
+.app > *{
+    min-width: 0;
 }

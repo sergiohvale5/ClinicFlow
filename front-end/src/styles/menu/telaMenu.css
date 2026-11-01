@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 
-.telaMenuAberta{
-    width: 100%;
-    max-width: 232px;
+.telaMenuAberta,
+.telaMenuAbertaNoturno{
+    width: 232px;
+    min-width: 232px;
     height: 100vh;
-
-    background-color: #c9d8ec;
+    height: 100dvh;
 
     padding: 20px 14px;
 
@@ -18,15 +18,28 @@
     display: flex;
     flex-direction: column;
 
-    transition: all 0.2s ease;
+    flex-shrink: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    transition: width 0.2s ease, min-width 0.2s ease;
+}
+
+.telaMenuAberta{
+    background-color: #c9d8ec;
 }
 
 .telaMenuAbertaNoturno{
-    width: 100%;
-    max-width: 232px;
-    height: 100vh;
-
     background-color: #0c1830;
+}
+
+.telaMenuFechada,
+.telaMenuFechadaNoturno{
+    width: 70px;
+    min-width: 70px;
+    height: 100vh;
+    height: 100dvh;
 
     padding: 20px 14px;
 
@@ -35,69 +48,43 @@
     display: flex;
     flex-direction: column;
 
-    transition: all 0.2s ease;
+    flex-shrink: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    transition: width 0.2s ease, min-width 0.2s ease;
 }
 
 .telaMenuFechada{
-    width: 100%;
-    max-width: 70px;
-    height: 100vh;
-
     background-color: #c9d8ec;
-
-    padding: 20px 14px;
-
-    gap: 6px;
-
-    display: flex;
-    flex-direction: column;
-
-    transition: all 0.2s ease;
 }
 
 .telaMenuFechadaNoturno{
-    width: 100%;
-    max-width: 70px;
-    height: 100vh;
-
     background-color: #0c1830;
+}
 
-    padding: 20px 14px;
+.nome_app,
+.nome_app_noturno{
+    padding: 4px 10px 18px;
 
-    gap: 6px;
+    cursor: default;
 
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
-    transition: all 0.2s ease;
+    gap: 25px;
+
+    min-width: 0;
 }
 
 .nome_app{
     color: #1f3556;
-
-    padding: 4px 10px 18px;
-
-    cursor: default;
-
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-
-    gap: 25px;
 }
 
 .nome_app_noturno{
     color: #b9cdee;
-
-    padding: 4px 10px 18px;
-
-    cursor: default;
-
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-
-    gap: 25px;
 }
 
 .icone_seta_esquerda,
@@ -106,7 +93,7 @@
 
     cursor: pointer;
 
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .icone_seta_esquerda:hover,
@@ -120,138 +107,69 @@
 }
 
 .link_menu{
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
     text-decoration: none;
+
+    flex-shrink: 0;
 }
 
-.menu_agenda{
+.menu_agenda,
+.menu_agenda_noturno,
+.menu_medicos,
+.menu_medicos_noturno,
+.menu_pacientes,
+.menu_pacientes_noturno,
+.modo_escuro,
+.modo_claro{
     width: 100%;
     max-width: 204px;
+    min-width: 0;
+    min-height: 41px;
     height: 41px;
 
     border-radius: 10px;
 
+    font-size: 14px;
+
+    padding: 10px 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    transition: background-color 0.2s ease, transform 0.2s ease, font-weight 0.2s ease;
+
+    flex-shrink: 0;
+}
+
+.menu_agenda,
+.menu_medicos,
+.menu_pacientes,
+.modo_escuro{
     color: #1f3556;
-
-    font-size: 14px;
-
-    padding: 11px 12px;
-
-    display: flex;          
-    align-items: center;
-
-    gap: 12px;          
-    
-    transition: all 0.2s ease;
 }
 
-.menu_agenda_noturno{
-    width: 100%;
-    max-width: 204px;
-    height: 41px;
-
-    border-radius: 10px;
-
+.menu_agenda_noturno,
+.menu_medicos_noturno,
+.menu_pacientes_noturno,
+.modo_claro{
     color: #b9cdee;
-
-    font-size: 14px;
-
-    padding: 11px 12px;
-
-    display: flex;          
-    align-items: center;
-
-    gap: 12px;           
-
-    transition: all 0.2s ease;
-}
-
-.menu_medicos{
-    width: 100%;
-    max-width: 204px;
-    height: 41px;
-
-    border-radius: 10px;
-
-    color: #1f3556;
-
-    font-size: 14px;
-
-    padding: 11px 12px;
-
-    display: flex;          
-    align-items: center;
-
-    gap: 12px;      
-    
-    transition: all 0.2s ease;
-}
-
-.menu_medicos_noturno{
-    width: 100%;
-    max-width: 204px;
-    height: 41px;
-
-    border-radius: 10px;
-
-    color: #b9cdee;
-
-    font-size: 14px;
-
-    padding: 11px 12px;
-
-    display: flex;          
-    align-items: center;
-
-    gap: 12px;            
-
-    transition: all 0.2s ease;
-}
-
-.menu_pacientes{
-    width: 100%;
-    max-width: 204px;
-    height: 41px;
-
-    border-radius: 10px;
-
-    color: #1f3556;
-
-    font-size: 14px;
-
-    padding: 11px 12px;
-
-    display: flex;          
-    align-items: center;
-       
-    gap: 12px;         
-    
-    transition: all 0.2s ease;
-}
-
-.menu_pacientes_noturno{
-    width: 100%;
-    max-width: 204px;
-    height: 41px;
-
-    border-radius: 10px;
-
-    color: #b9cdee;
-
-    font-size: 14px;
-
-    padding: 11px 12px;
-
-    display: flex;          
-    align-items: center;
-       
-    gap: 12px;         
-    
-    transition: all 0.2s ease;
 }
 
 .icon_calendario,
 .icon_medico,
-.icon_paciente{
+.icon_paciente,
+.icon_lua,
+.icon_sol{
     width: 19px;
     height: 19px;
 
@@ -260,10 +178,15 @@
 
 .menu_agenda:hover,
 .menu_medicos:hover,
-.menu_pacientes:hover{
+.menu_pacientes:hover,
+.modo_escuro:hover,
+.menu_agenda_noturno:hover,
+.menu_medicos_noturno:hover,
+.menu_pacientes_noturno:hover,
+.modo_claro:hover{
     background: color(srgb 0.247059 0.431373 0.658824 / 0.18);
 
-    transform: scale(1.04);
+    transform: scale(1.02);
 
     font-weight: bolder;
 
@@ -272,114 +195,124 @@
 
 .menu_agenda:active,
 .menu_medicos:active,
-.menu_pacientes:active{
-    transform: scale(1);
-}
-
-.menu_agenda_noturno:hover,
-.menu_medicos_noturno:hover,
-.menu_pacientes_noturno:hover{
-    background: color(srgb 0.247059 0.431373 0.658824 / 0.18);
-
-    transform: scale(1.04);
-
-    font-weight: bolder;
-
-    cursor: pointer;
-}
-
+.menu_pacientes:active,
+.modo_escuro:active,
 .menu_agenda_noturno:active,
 .menu_medicos_noturno:active,
-.menu_pacientes_noturno:active{
+.menu_pacientes_noturno:active,
+.modo_claro:active{
     transform: scale(1);
 }
 
 .divisor{
     width: 100%;
-    width: 204px;
-    height: 700px;
-}
-
-.modo_escuro{
-    width: 100%;
     max-width: 204px;
-    height: 41px;
+    min-width: 0;
 
-    border-radius: 10px;
+    flex: 1 1 auto;
 
-    color: #1f3556;
-
-    font-size: 14px;
-
-    padding: 11px 12px;
-
-    display: flex;          
-    align-items: center;
-
-    gap: 12px; 
-
-    transition: all 0.2s ease;
+    min-height: 12px;
 }
 
-.icon_lua{
-    width: 19px;
-    height: 19px;
+@media (max-width: 768px){
+    .telaMenuAberta,
+    .telaMenuAbertaNoturno{
+        width: 200px;
+        min-width: 200px;
 
-    flex-shrink: 0;
+        padding: 18px 10px;
+    }
+
+    .telaMenuFechada,
+    .telaMenuFechadaNoturno{
+        width: 60px;
+        min-width: 60px;
+
+        padding: 18px 8px;
+    }
+
+    .nome_app,
+    .nome_app_noturno{
+        gap: 12px;
+        padding: 4px 6px 18px;
+    }
+
+    .menu_agenda,
+    .menu_agenda_noturno,
+    .menu_medicos,
+    .menu_medicos_noturno,
+    .menu_pacientes,
+    .menu_pacientes_noturno,
+    .modo_escuro,
+    .modo_claro{
+        padding: 10px 8px;
+        gap: 9px;
+    }
 }
 
-.modo_escuro:hover{
-    background: color(srgb 0.247059 0.431373 0.658824 / 0.18);
+@media (max-width: 480px){
+    .telaMenuAberta,
+    .telaMenuAbertaNoturno{
+        width: 180px;
+        min-width: 180px;
 
-    transform: scale(1.04);
+        padding: 16px 8px;
+    }
 
-    font-weight: bolder;
+    .telaMenuFechada,
+    .telaMenuFechadaNoturno{
+        width: 56px;
+        min-width: 56px;
 
-    cursor: pointer;
+        padding: 16px 6px;
+    }
+
+    .nome_app,
+    .nome_app_noturno{
+        gap: 8px;
+        padding: 4px 4px 16px;
+    }
+
+    .menu_agenda,
+    .menu_agenda_noturno,
+    .menu_medicos,
+    .menu_medicos_noturno,
+    .menu_pacientes,
+    .menu_pacientes_noturno,
+    .modo_escuro,
+    .modo_claro{
+        font-size: 12px;
+
+        padding: 10px 6px;
+
+        gap: 7px;
+    }
+
+    .icon_calendario,
+    .icon_medico,
+    .icon_paciente,
+    .icon_lua,
+    .icon_sol{
+        width: 18px;
+        height: 18px;
+    }
 }
 
-.modo_escuro:active{
-    transform: scale(1);
-}
-
-.modo_claro{
-    width: 100%;
-    max-width: 204px;
-    height: 41px;
-
-    border-radius: 10px;
-
-    color: #b9cdee;
-
-    font-size: 14px;
-
-    padding: 11px 12px;
-
-    display: flex;          
-    align-items: center;
-
-    gap: 12px; 
-
-    transition: all 0.2s ease;
-}
-
-.icon_sol{
-    width: 19px;
-    height: 19px;
-
-    flex-shrink: 0;
-}
-
-.modo_claro:hover{
-    background: color(srgb 0.247059 0.431373 0.658824 / 0.18);
-
-    transform: scale(1.04);
-
-    font-weight: bolder;
-
-    cursor: pointer;
-}
-
-.modo_claro:active{
-    transform: scale(1);
+@media (prefers-reduced-motion: reduce){
+    .telaMenuAberta,
+    .telaMenuAbertaNoturno,
+    .telaMenuFechada,
+    .telaMenuFechadaNoturno,
+    .icone_seta_esquerda,
+    .icone_seta_direita,
+    .menu_agenda,
+    .menu_agenda_noturno,
+    .menu_medicos,
+    .menu_medicos_noturno,
+    .menu_pacientes,
+    .menu_pacientes_noturno,
+    .modo_escuro,
+    .modo_claro{
+        transition: none;
+    }
 }
