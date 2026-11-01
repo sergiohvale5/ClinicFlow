@@ -6,11 +6,13 @@
 
 .sobreposicao_popup_editar_procedimentos{
     width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
 
     position: fixed;
     inset: 0px;
+
+    padding: 16px;
 
     z-index: 99999999;
 
@@ -20,17 +22,15 @@
     justify-content: center;
     align-items: center;
 
-    padding: 16px;
-
     overflow-y: auto;
 }
 
 .popup_editar_procedimentos{
     width: 100%;
     max-width: 560px;
-    min-width: 0;
     max-height: calc(100vh - 32px);
     max-height: calc(100dvh - 32px);
+    min-width: 0;
 
     padding: 22px;
 
@@ -47,6 +47,7 @@
     gap: 10px;
 
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .titulo_editar_procedimentos{
@@ -56,13 +57,11 @@
     justify-content: space-between;
     align-items: center;
 
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .input_select_editar_procedimentos{
     width: 100%;
-    min-width: 0;
 
     display: flex;
     flex-direction: column;
@@ -81,20 +80,19 @@
     gap: 5px;
 }
 
-.nome_editar_procedimentos{
+.nome_editar_procedimentos,
+.nome_select_editar_procedimentos{
     color: #5d6f8a;
 
     font-size: 12px;
     font-weight: bolder;
-
-    overflow-wrap: break-word;
 }
 
 .input_editar_procedimentos,
 .select_editar_procedimentos{
     width: 100%;
     min-width: 0;
-    min-height: 40px;
+    min-height: 38px;
 
     background-color: #f5f8fc;
 
@@ -106,41 +104,45 @@
     outline: 0px;
 
     font-size: 14px;
+    color: #1b2a41;
 }
 
 .input_editar_procedimentos:focus,
 .select_editar_procedimentos:focus{
-    border-color: #1b2a41;
+    border-color: #3f6ea8;
 }
 
-@media (max-width: 768px){
-
-    .popup_editar_procedimentos{
-        max-width: 520px;
-
-        padding: 20px;
-    }
-
-}
-
-@media (max-width: 480px){
+@media (max-width: 600px){
 
     .sobreposicao_popup_editar_procedimentos{
-        align-items: flex-start;
-
         padding: 12px;
     }
 
     .popup_editar_procedimentos{
-        max-width: 100%;
         max-height: calc(100vh - 24px);
         max-height: calc(100dvh - 24px);
 
-        padding: 16px;
+        padding: 18px;
 
-        border-radius: 12px;
+        border-radius: 14px;
+    }
 
-        gap: 12px;
+    .titulo_editar_procedimentos{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 360px){
+
+    .sobreposicao_popup_editar_procedimentos{
+        padding: 8px;
+    }
+
+    .popup_editar_procedimentos{
+        max-height: calc(100vh - 16px);
+        max-height: calc(100dvh - 16px);
+
+        padding: 14px;
     }
 
     .titulo_editar_procedimentos{
@@ -149,31 +151,6 @@
 
     .input_editar_procedimentos,
     .select_editar_procedimentos{
-        font-size: 16px;
-        padding: 10px;
+        font-size: 13px;
     }
-
-}
-
-@media (max-height: 500px){
-
-    .sobreposicao_popup_editar_procedimentos{
-        align-items: flex-start;
-    }
-
-    .popup_editar_procedimentos{
-        margin: auto 0px;
-    }
-
-}
-
-@media (prefers-reduced-motion: reduce){
-
-    .sobreposicao_popup_editar_procedimentos *,
-    .popup_editar_procedimentos *{
-        scroll-behavior: auto;
-        transition: none;
-        animation: none;
-    }
-
 }

@@ -19,7 +19,6 @@
 
 .atalhos{
     width: 100%;
-    min-width: 0;
 
     background-color: #3f6ea8;
 
@@ -35,16 +34,13 @@
     justify-content: space-between;
     align-items: center;
 
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 18px;
 }
 
 .texto_medicos{
     color: #ffffff;
 
     cursor: default;
-
-    overflow-wrap: anywhere;
 }
 
 .texto_gerenciamento_atendimento{
@@ -53,25 +49,18 @@
     color: #b3c6dd;
 
     cursor: default;
-
-    overflow-wrap: anywhere;
 }
 
 .btn_atalhos{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
 
     gap: 10px;
-
-    min-width: 0;
-    max-width: 100%;
-    flex-wrap: wrap;
 }
 
 .btn_especialidades_procedimentos,
 .btn_cadastrar_medicos{
-    min-width: 0;
     min-height: 40px;
 
     background-color: #ffffff;
@@ -87,10 +76,7 @@
 
     outline: 0px;
 
-    white-space: normal;
-    overflow-wrap: anywhere;
-
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .btn_especialidades_procedimentos{
@@ -107,7 +93,7 @@
 .btn_especialidades_procedimentos:hover{
     cursor: pointer;
 
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 .btn_cadastrar_medicos:active,
@@ -115,9 +101,8 @@
     transform: scale(1);
 }
 
-.tabela_cadastro_medicos{
+.tabela_cadastro_medicos {
     width: 100%;
-    min-width: 0;
     max-width: 100%;
 
     border: 1px solid #d9e2ef;
@@ -129,17 +114,14 @@
     overflow-y: hidden;
 
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: #9aacc4 #f5f8fc;
 }
 
 .dados_cadastro_medico,
-.dados_medicos{
-    width: 100%;
+.dados_medicos {
     min-width: 1050px;
 
     display: grid;
-    grid-template-columns: minmax(140px, 1.4fr) minmax(100px, 1fr) minmax(120px, 1.2fr) minmax(130px, 1.3fr) minmax(150px, 1.5fr) minmax(70px, 0.6fr) 125px;
+    grid-template-columns: 1.4fr 1fr 1.2fr 1.3fr 1.5fr 0.6fr 125px;
     align-items: center;
 
     gap: 16px;
@@ -155,11 +137,9 @@
     color: black;
 
     font-weight: bolder;
-
-    overflow-wrap: anywhere;
 }
 
-.dados_cadastro_medico{
+.dados_cadastro_medico {
     color: #5d6f8a;
 
     font-size: 14px;
@@ -168,39 +148,30 @@
     border-bottom: 1px solid #d9e2ef;
 }
 
-.dados_medicos{
+.dados_medicos {
     color: #344563;
 
     font-size: 14px;
     font-weight: 500;
-
-    border-bottom: 1px solid #e4eaf2;
-}
-
-.dados_medicos:last-child{
-    border-bottom: 0px;
 }
 
 .dados_cadastro_medico span,
-.dados_medicos span{
+.dados_medicos span {
     min-width: 0;
     overflow-wrap: anywhere;
 }
 
-.btn_editar_excluir{
+.btn_editar_excluir {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
 
     gap: 5px;
-
-    min-width: 0;
 }
 
 .btn_editar,
-.btn_excluir{
+.btn_excluir {
     width: 55px;
-    min-height: 32px;
+    min-height: 30px;
 
     flex-shrink: 0;
 
@@ -220,14 +191,14 @@
     justify-content: center;
     align-items: center;
 
-    transition: transform 0.2s ease;
+    transition: all 0.3s ease;
 }
 
-.btn_editar{
+.btn_editar {
     background-color: #3f6ea8;
 }
 
-.btn_excluir{
+.btn_excluir {
     background-color: #c0453f;
 }
 
@@ -241,84 +212,66 @@
     transform: scale(1);
 }
 
-@media (max-width: 1024px){
+@media screen and (max-width: 1024px){
+
     .TelaMedicosCadastrados{
         padding: 20px;
     }
 
     .atalhos{
         padding: 16px 18px;
-
-        gap: 16px;
+        gap: 14px;
     }
 
-    .dados_cadastro_medico,
-    .dados_medicos{
-        gap: 12px;
-
-        padding: 13px 14px;
+    .btn_especialidades_procedimentos,
+    .btn_cadastrar_medicos{
+        font-size: 13px;
+        padding: 9px 12px;
     }
+
 }
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
+
     .TelaMedicosCadastrados{
-        padding: 16px;
+        padding: 18px;
     }
 
     .atalhos{
         flex-direction: column;
         align-items: stretch;
 
-        padding: 16px;
-
-        gap: 16px;
-
-        border-radius: 12px;
+        padding: 18px;
     }
 
     .btn_atalhos{
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 8px;
     }
 
     .btn_especialidades_procedimentos,
     .btn_cadastrar_medicos{
-        width: 100%;
+        flex: 1;
         max-width: none;
-
-        padding: 10px 8px;
-
-        font-size: 13px;
-    }
-
-    .tabela_cadastro_medicos{
-        border-radius: 12px;
     }
 
     .dados_cadastro_medico,
     .dados_medicos{
-        min-width: 1050px;
-
-        gap: 12px;
-
-        padding: 12px;
+        min-width: 950px;
     }
+
 }
 
-@media (max-width: 480px){
+@media screen and (max-width: 480px){
+
     .TelaMedicosCadastrados{
         padding: 12px;
     }
 
     .atalhos{
-        margin-bottom: 14px;
+        padding: 16px;
+        border-radius: 12px;
 
-        padding: 14px;
-
-        gap: 14px;
+        gap: 16px;
     }
 
     .texto_medicos{
@@ -330,43 +283,36 @@
     }
 
     .btn_atalhos{
-        grid-template-columns: minmax(0, 1fr);
+        flex-direction: column;
         gap: 8px;
     }
 
     .btn_especialidades_procedimentos,
     .btn_cadastrar_medicos{
+        width: 100%;
         max-width: none;
-        min-height: 42px;
 
-        font-size: 13px;
+        min-height: 42px;
+    }
+
+    .tabela_cadastro_medicos{
+        border-radius: 10px;
     }
 
     .dados_cadastro_medico,
     .dados_medicos{
-        min-width: 1050px;
+        min-width: 900px;
 
-        gap: 10px;
+        gap: 12px;
 
-        padding: 12px 10px;
-
+        padding: 12px;
         font-size: 13px;
     }
 
     .btn_editar,
     .btn_excluir{
-        width: 55px;
-        min-height: 34px;
-
-        font-size: 12px;
+        width: 52px;
+        font-size: 11px;
     }
-}
 
-@media (prefers-reduced-motion: reduce){
-    .btn_cadastrar_medicos,
-    .btn_especialidades_procedimentos,
-    .btn_editar,
-    .btn_excluir{
-        transition: none;
-    }
 }

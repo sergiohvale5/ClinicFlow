@@ -1,10 +1,6 @@
 import "../../styles/medicos/popupEditarProcedimentos.css";
 import { IoClose } from "react-icons/io5";
-
-interface TelaMedicos{
-    onFecharPopupEditarProcedimentos: () => void; 
-    onAbrirPopupEspecialidadesProcedimentos: () => void;
-}
+import type { TelaMedicos } from "../../interfaces/interfacePopupEditarProcedimentos";
 
 function PopupEditarProcedimentos({onFecharPopupEditarProcedimentos, onAbrirPopupEspecialidadesProcedimentos}: TelaMedicos){
     return(

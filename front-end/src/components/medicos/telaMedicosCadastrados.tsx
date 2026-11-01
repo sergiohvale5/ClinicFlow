@@ -1,10 +1,6 @@
 import "../../styles/medicos/telaMedicosCadastrados.css";
 import { useOutletContext } from "react-router-dom";
-
-interface TelaMedicosContext {
-    onAbrirPopupEspecialidadesProcedimentos: () => void;
-    onAbrirCadastrosMedicos: () => void;
-}
+import type { TelaMedicosContext } from "../../interfaces/interfaceTelaMedicosCadastrados";
 
 function TelaMedicosCadastrados(){
     const {onAbrirPopupEspecialidadesProcedimentos, onAbrirCadastrosMedicos} = useOutletContext<TelaMedicosContext>();

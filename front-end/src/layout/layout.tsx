@@ -8,7 +8,7 @@ import PopupCadastrarEspecialidades from "../components/medicos/popupCadastrarEs
 import PopupCadastrarProcedimento from "../components/medicos/popupCadastrarProcedimento";
 import PupupEditarEspecialidade from "../components/medicos/popupEditarEspecialidade";
 import PopupEditarProcedimentos from "../components/medicos/popupEditarProcedimentos";
-import PopupPacientes from "../components/pacientes/popupPacientes";
+import TelaPacientes from "../components/pacientes/telaPacientes";
 
 function Layouts() {
     {
@@ -44,7 +44,7 @@ function Layouts() {
             />
 
             {
-                /** Médico */
+                /** Médicos */
             }
 
             {popupMedicos && (
@@ -113,12 +113,12 @@ function Layouts() {
             }
 
             {
-                /** Paciente */
+                /** Pacientes */
             }
-
+            
             {
                 popupPacientes && (
-                    <PopupPacientes 
+                    <TelaPacientes 
                         onFecharPopupPacientes={() => setPopupPacientes(false)}
                     />
                 )

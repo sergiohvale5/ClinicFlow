@@ -8,11 +8,7 @@ import { LuMoon } from "react-icons/lu";
 import { LuSun } from "react-icons/lu";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-interface TelaMenuProps {
-    onAbrirPopupMedicos: () => void;
-    onAbrirPopupPacientes: () => void;
-}
+import type { TelaMenuProps } from "../../interfaces/interfaceTelaMenu";
 
 function TelaMenu({ onAbrirPopupMedicos, onAbrirPopupPacientes }: TelaMenuProps){
     const [efeitoMenu, setEfeitoMenu] = useState<boolean>(false);

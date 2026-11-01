@@ -3,12 +3,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoCalendarClearOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
-
-interface TelaMedicosProps {
-    onFecharPopupMedicos: () => void;
-    onAbrirCadastrosMedicos: () => void;
-    onAbrirPopupEspecialidadesProcedimentos: () => void;
-}
+import type { TelaMedicosProps } from "../../interfaces/interfacePopupMedicos";
 
 function PopupMedicos({ onFecharPopupMedicos, onAbrirCadastrosMedicos, onAbrirPopupEspecialidadesProcedimentos}: TelaMedicosProps){
     return(
@@ -22,6 +17,7 @@ function PopupMedicos({ onFecharPopupMedicos, onAbrirCadastrosMedicos, onAbrirPo
                             <IoClose />
                         </button>
                     </h2>
+                    
 
                     <div className="cadastroMedicos_medicosCadastrados">
                         <div className="cadastro_medicos" onClick={() => {onFecharPopupMedicos(); onAbrirCadastrosMedicos()}}>

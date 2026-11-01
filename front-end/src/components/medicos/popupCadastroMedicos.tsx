@@ -1,12 +1,7 @@
 import "../../styles/medicos/popupCadastroMedicos.css";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
-
-interface TelaMedicos{
-    onFecharCadastrosMedicos: () => void;
-    onFecharPopupMedicos: () => void;
-    onAbrirPopupMedicos: () => void;
-}
+import type { TelaMedicos } from "../../interfaces/interfacePopupCadastroMedicos";
 
 function PopupCadastroMedicos({onFecharCadastrosMedicos, onFecharPopupMedicos, onAbrirPopupMedicos}: TelaMedicos){
     const [formaAtendimento, setFormaAtendimento] = useState<string>("");

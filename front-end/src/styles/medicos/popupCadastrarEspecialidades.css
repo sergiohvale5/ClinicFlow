@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
 
-    padding: 16px;
+    padding: 20px;
 
     overflow-y: auto;
 }
@@ -28,10 +28,8 @@
 .popup_cadastrar_especialidades{
     width: 100%;
     max-width: 560px;
-    min-width: 0;
-
-    max-height: calc(100vh - 32px);
-    max-height: calc(100dvh - 32px);
+    max-height: calc(100vh - 40px);
+    max-height: calc(100dvh - 40px);
 
     padding: 22px;
 
@@ -58,7 +56,6 @@
     align-items: center;
 
     gap: 10px;
-    flex-wrap: wrap;
 }
 
 .nome_input_especialidade{
@@ -67,8 +64,8 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: baseline;
+    align-items: baseline;
 
     gap: 5px;
 }
@@ -78,14 +75,12 @@
 
     font-size: 12px;
     font-weight: bolder;
-
-    overflow-wrap: break-word;
 }
 
 .input_especialidade{
     width: 100%;
     min-width: 0;
-    min-height: 40px;
+    min-height: 38px;
 
     background-color: #f5f8fc;
 
@@ -95,8 +90,6 @@
     border-radius: 9px;
 
     outline: 0px;
-
-    font-size: 14px;
 }
 
 .input_especialidade:focus{
@@ -107,16 +100,18 @@
     width: 100%;
 
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: end;
+    align-items: end;
 
     gap: 8px;
+
+    margin-top: 8px;
 }
 
 .cancelar_popup{
     width: 100%;
     max-width: 94.91px;
-    min-height: 40px;
+    min-height: 38px;
 
     color: #1b2a41;
 
@@ -130,15 +125,13 @@
     border: 1px solid #d9e2ef;
     border-radius: 8px;
 
-    flex-shrink: 0;
-
     transition: all 0.2s ease;
 }
 
 .salvar_popup{
     width: 100%;
     max-width: 74.17px;
-    min-height: 40px;
+    min-height: 38px;
 
     color: #ffffff;
 
@@ -151,8 +144,6 @@
 
     border: 1px solid #d9e2ef;
     border-radius: 8px;
-
-    flex-shrink: 0;
 
     transition: all 0.2s ease;
 }
@@ -169,72 +160,44 @@
     transform: scale(1);
 }
 
-@media (max-width: 768px){
-
-    .popup_cadastrar_especialidades{
-        max-width: 520px;
-
-        padding: 20px;
-    }
-
-}
-
-@media (max-width: 480px){
-
+@media (max-width: 600px){
     .sobreposicao_popup_cadastrar_especialidades{
-        align-items: flex-start;
-
-        padding: 12px;
+        padding: 14px;
     }
 
     .popup_cadastrar_especialidades{
-        max-width: 100%;
+        max-height: calc(100vh - 28px);
+        max-height: calc(100dvh - 28px);
 
-        max-height: calc(100vh - 24px);
-        max-height: calc(100dvh - 24px);
+        padding: 18px;
 
-        padding: 16px;
-
-        border-radius: 12px;
-
-        gap: 12px;
-    }
-
-    .titulo_cadastrar_especialidade{
-        font-size: 16px;
-    }
-
-    .input_especialidade{
-        font-size: 16px;
-
-        padding: 10px;
+        border-radius: 13px;
     }
 
     .calcelar_salvar_popup{
-        justify-content: flex-end;
+        gap: 7px;
     }
-
 }
 
-@media (max-height: 500px){
-
+@media (max-width: 360px){
     .sobreposicao_popup_cadastrar_especialidades{
-        align-items: flex-start;
+        padding: 10px;
     }
 
     .popup_cadastrar_especialidades{
-        margin: auto 0px;
+        max-height: calc(100vh - 20px);
+        max-height: calc(100dvh - 20px);
+
+        padding: 15px;
     }
 
-}
-
-@media (prefers-reduced-motion: reduce){
-
-    .sobreposicao_popup_cadastrar_especialidades *,
-    .popup_cadastrar_especialidades *{
-        scroll-behavior: auto;
-        transition: none;
-        animation: none;
+    .titulo_cadastrar_especialidade{
+        font-size: 15px;
     }
 
+    .cancelar_popup,
+    .salvar_popup{
+        font-size: 13px;
+        padding: 8px 12px;
+    }
 }

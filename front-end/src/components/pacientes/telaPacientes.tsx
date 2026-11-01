@@ -7,7 +7,7 @@ interface TelaPacientesProps{
     onFecharPopupPacientes: () => void;
 }
 
-function PopupPacientes({onFecharPopupPacientes}: TelaPacientesProps){
+function TelaPacientes({onFecharPopupPacientes}: TelaPacientesProps){
     return(
         <>
             <div className="sobreposicao">
@@ -60,4 +60,4 @@ function PopupPacientes({onFecharPopupPacientes}: TelaPacientesProps){
     );
 }
 
-export default PopupPacientes;
+export default TelaPacientes;

@@ -1,5 +1,3 @@
-import "../../styles/agendas/telaAgendas.css";
-
 function TelaAgendas(){
     return(
         <>

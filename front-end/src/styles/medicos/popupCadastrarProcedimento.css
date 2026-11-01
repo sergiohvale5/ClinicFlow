@@ -6,11 +6,13 @@
 
 .sobreposicao_popup_cadastrar_procedimento{
     width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
 
     position: fixed;
     inset: 0px;
+
+    padding: 16px;
 
     z-index: 9999999;
 
@@ -20,18 +22,15 @@
     justify-content: center;
     align-items: center;
 
-    padding: 16px;
-
     overflow-y: auto;
 }
 
 .popup_cadastrar_procedimento{
     width: 100%;
     max-width: 560px;
-    min-width: 0;
-
     max-height: calc(100vh - 32px);
     max-height: calc(100dvh - 32px);
+    min-width: 0;
 
     padding: 22px;
 
@@ -48,6 +47,7 @@
     gap: 10px;
 
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .titulo_cadastrar_procedimento{
@@ -58,7 +58,6 @@
     align-items: center;
 
     gap: 10px;
-    flex-wrap: wrap;
 }
 
 .nome_input_select_procedimento{
@@ -67,8 +66,8 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: baseline;
+    align-items: baseline;
 
     gap: 10px;
 }
@@ -80,26 +79,25 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: baseline;
+    align-items: baseline;
 
     gap: 5px;
 }
 
-.nome_procedimento{
+.nome_procedimento,
+.nome_select_procedimento{
     color: #5d6f8a;
 
     font-size: 12px;
     font-weight: bolder;
-
-    overflow-wrap: break-word;
 }
 
 .input_procedimento,
 .select_procedimento{
     width: 100%;
     min-width: 0;
-    min-height: 40px;
+    min-height: 38px;
 
     background-color: #f5f8fc;
 
@@ -111,42 +109,45 @@
     outline: 0px;
 
     font-size: 14px;
+    color: #1b2a41;
 }
 
 .input_procedimento:focus,
 .select_procedimento:focus{
-    border-color: #1b2a41;
+    border-color: #3f6ea8;
 }
 
-@media (max-width: 768px){
-
-    .popup_cadastrar_procedimento{
-        max-width: 520px;
-
-        padding: 20px;
-    }
-
-}
-
-@media (max-width: 480px){
+@media (max-width: 600px){
 
     .sobreposicao_popup_cadastrar_procedimento{
-        align-items: flex-start;
-
         padding: 12px;
     }
 
     .popup_cadastrar_procedimento{
-        max-width: 100%;
-
         max-height: calc(100vh - 24px);
         max-height: calc(100dvh - 24px);
 
-        padding: 16px;
+        padding: 18px;
 
-        border-radius: 12px;
+        border-radius: 14px;
+    }
 
-        gap: 12px;
+    .titulo_cadastrar_procedimento{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 360px){
+
+    .sobreposicao_popup_cadastrar_procedimento{
+        padding: 8px;
+    }
+
+    .popup_cadastrar_procedimento{
+        max-height: calc(100vh - 16px);
+        max-height: calc(100dvh - 16px);
+
+        padding: 14px;
     }
 
     .titulo_cadastrar_procedimento{
@@ -155,32 +156,6 @@
 
     .input_procedimento,
     .select_procedimento{
-        font-size: 16px;
-
-        padding: 10px;
+        font-size: 13px;
     }
-
-}
-
-@media (max-height: 500px){
-
-    .sobreposicao_popup_cadastrar_procedimento{
-        align-items: flex-start;
-    }
-
-    .popup_cadastrar_procedimento{
-        margin: auto 0px;
-    }
-
-}
-
-@media (prefers-reduced-motion: reduce){
-
-    .sobreposicao_popup_cadastrar_procedimento *,
-    .popup_cadastrar_procedimento *{
-        scroll-behavior: auto;
-        transition: none;
-        animation: none;
-    }
-
 }

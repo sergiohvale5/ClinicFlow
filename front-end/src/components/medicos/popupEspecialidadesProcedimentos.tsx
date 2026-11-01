@@ -1,15 +1,7 @@
 import "../../styles/medicos/popupEspecialidadesProcedimentos.css";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
-
-interface TelaMedicosProps {
-    onFecharPopupEspecialidadesProcedimentos: () => void;
-    onAbrirPopupMedicos: () => void;
-    onAbrirPopupCadastrarEspecialidades: () => void;
-    onAbrirPopupCadastrarProcedimento: () => void;
-    onAbrirPupupEditarEspecialidade: () => void;
-    onAbrirPopupEditarProcedimentos: () => void;
-}
+import type { TelaMedicosProps } from "../../interfaces/interfacePopupEspecialidadesProcedimentos";
 
 function PopupEspecialidadesProcedimentos({ onFecharPopupEspecialidadesProcedimentos, onAbrirPopupMedicos, onAbrirPopupCadastrarEspecialidades, onAbrirPopupCadastrarProcedimento, onAbrirPupupEditarEspecialidade, onAbrirPopupEditarProcedimentos }: TelaMedicosProps){
     const [secaoAtiva, setSecaoAtiva] = useState<boolean>(false);

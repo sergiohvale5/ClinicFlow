@@ -1,3 +1,4 @@
+
 *{
     margin: 0px;
     padding: 0px;
@@ -6,11 +7,12 @@
 
 .sobreposicao{
     width: 100%;
-    height: 100vh;
-    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
 
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
 
     background-color: #060c1a8c;
 
@@ -24,7 +26,6 @@
     align-items: center;
 
     overflow-y: auto;
-    overflow-x: hidden;
 }
 
 .popup_medicos, .popup_pacientes{
@@ -42,17 +43,15 @@
 
     padding: 22px;
 
-    overflow-x: hidden;
     overflow-y: auto;
+    overflow-x: hidden;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-    overscroll-behavior: contain;
 }
 
-.titulo_medico, .titulo_paciente{
+.titulo_medico , .titulo_paciente{
     margin: 0 0 14px;
 
     font-size: 18px;
@@ -63,13 +62,11 @@
     justify-content: space-between;
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 }
 
 .fechar_popup{
     align-self: flex-end;
-
-    flex-shrink: 0;
 
     border: none;
 
@@ -92,31 +89,24 @@
 .cadastrarPacientes_gerenciarPacientes{
     display: flex;
     flex-direction: row;
-
     gap: 12px;
 
-    width: 100%;
     min-width: 0;
 }
 
 .link{
+    text-decoration: none;
     min-width: 0;
     flex: 1;
-
-    text-decoration: none;
 }
 
 .cadastro_medicos, 
-.cadastro_pacientes,
-.medicos_cadastrados, 
-.gerenciar_pacientes{
-    flex: 1;
-
+.cadastro_pacientes{
+    width: 100%;
     min-width: 0;
-    min-height: 80px;
-    height: auto;
+    height: 80px;
 
-    padding: 18px;
+    padding: 22px;
 
     border-radius: 14px;
     border: 1px solid #d9e2ef;
@@ -126,44 +116,72 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: baseline;
 
     gap: 3px;
 
     transition: all 0.2s ease;
-
-    overflow-wrap: anywhere;
 }
 
 .cadastro_medicos h2, 
-.cadastro_pacientes h2,
+.cadastro_pacientes h2{
+    color: #303d53;
+
+    font-size: 18px;
+}
+
+.cadastro_medicos span, 
+.cadastro_pacientes span{
+    color: #5d6f8a;
+
+    font-size: 11px;
+}
+
+.medicos_cadastrados, 
+.gerenciar_pacientes{
+    flex: 1;
+
+    height: 80px;
+    min-width: 0;
+
+    padding: 22px;
+
+    border-radius: 14px;
+    border: 1px solid #d9e2ef;
+
+    background-color: #f5f8fc;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    gap: 3px;
+
+    transition: all 0.2s ease;
+}
+
 .medicos_cadastrados h2, 
 .gerenciar_pacientes h2{
     color: #303d53;
 
     font-size: 18px;
-
-    overflow-wrap: anywhere;
 }
 
-.cadastro_medicos span, 
-.cadastro_pacientes span,
 .medicos_cadastrados span, 
 .gerenciar_pacientes span{
     color: #5d6f8a;
 
     font-size: 11px;
-
-    overflow-wrap: anywhere;
 }
 
 .especialidades_procedimentos{
     width: 100%;
+    min-width: 0;
 
     min-height: 84px;
-    height: auto;
 
-    padding: 18px;
+    padding: 22px;
 
     margin-top: 5px;
 
@@ -175,13 +193,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: baseline;
 
     gap: 3px;
 
     transition: all 0.2s ease;
-
-    overflow-wrap: anywhere;
 }
 
 .especialidades_procedimentos h2{
@@ -196,26 +212,24 @@
     font-size: 11px;
 }
 
-.atalhos_popup_medicos{
+.atalhos_popup_medicos {
     width: 100%;
     min-width: 0;
 
     display: flex;
-    flex-direction: row;
 
     gap: 8px;
 }
 
 .link_pacientes,
-.link_agenda{
+.link_agenda {
     flex: 1;
     min-width: 0;
-
     text-decoration: none;
 }
 
 .atalho_pacientes,
-.atalho_agenda{
+.atalho_agenda {
     width: 100%;
     min-width: 0;
 
@@ -235,8 +249,6 @@
     font-weight: 700;
 
     transition: all 0.2s ease;
-
-    overflow-wrap: anywhere;
 }
 
 .cadastro_medicos:hover,
@@ -265,9 +277,7 @@
 
 hr{
     width: 100%;
-
     margin: 18px 0;
-
     border: 1px solid #d9e2ef;
 }
 
@@ -281,9 +291,7 @@ hr{
 
 .atalhos_titulo{
     margin: 0 0 8px;
-
     color: #5d6f8a;
-
     font-size: 12px;
 }
 
@@ -293,111 +301,56 @@ hr{
 
     display: flex;
     flex-wrap: wrap;
-
     gap: 8px;
-
     font-size: 14px;
 }
 
-.atalho_pacientes, 
-.atalho_agenda, 
-.atalho_medicos{
+.atalho_pacientes, .atalho_agenda, .atalho_medicos{
     display: flex;
     align-items: center;
-
     gap: 10px;
-
-    flex: 1 1 130px;
-    min-width: 0;
-
+    flex: 1;
+    min-width: 130px;
     border: 1px solid #d9e2ef;
     border-radius: 10px;
-
     padding: 10px 12px;
-
     cursor: pointer;
     font-weight: 700;
-
     background-color: #f5f8fc;
     color: #303d53;
-
     transition: all 0.2s ease;
-
-    overflow-wrap: anywhere;
 }
 
 .icone-atalhos{
     width: 18px;
     height: 18px;
-
     color: #303d53;
-
     flex-shrink: 0;
 }
 
-@media (max-width: 768px){
+@media (max-width: 600px){
+
     .sobreposicao{
         padding: 12px;
+        align-items: center;
     }
 
     .popup_medicos, .popup_pacientes{
+        max-height: calc(100vh - 24px);
         max-height: calc(100dvh - 24px);
 
-        padding: 20px;
+        padding: 18px;
 
         border-radius: 14px;
     }
 
-    .cadastro_medicos, 
-    .cadastro_pacientes,
-    .medicos_cadastrados, 
-    .gerenciar_pacientes{
-        padding: 15px;
-    }
-
-    .cadastro_medicos h2, 
-    .cadastro_pacientes h2,
-    .medicos_cadastrados h2, 
-    .gerenciar_pacientes h2{
-        font-size: 16px;
-    }
-
-    .especialidades_procedimentos{
-        padding: 15px;
-    }
-
-    .atalhos_popup{
-        gap: 8px;
-    }
-}
-
-@media (max-width: 480px){
-    .sobreposicao{
-        padding: 8px;
-    }
-
-    .popup_medicos, .popup_pacientes{
-        max-height: calc(100dvh - 16px);
-
-        padding: 16px;
-
-        border-radius: 12px;
-    }
-
     .titulo_medico, .titulo_paciente{
-        font-size: 16px;
-
-        gap: 8px;
-    }
-
-    .fechar_popup{
-        font-size: 22px;
+        font-size: 17px;
     }
 
     .cadastroMedicos_medicosCadastrados, 
     .cadastrarPacientes_gerenciarPacientes{
         flex-direction: column;
-
         gap: 8px;
     }
 
@@ -405,48 +358,37 @@ hr{
     .cadastro_pacientes,
     .medicos_cadastrados, 
     .gerenciar_pacientes{
-        width: 100%;
-        min-height: 70px;
+        min-height: 76px;
+        height: auto;
+        padding: 16px;
+    }
 
-        padding: 14px;
+    .especialidades_procedimentos{
+        min-height: 76px;
+        padding: 16px;
     }
 
     .cadastro_medicos h2, 
     .cadastro_pacientes h2,
     .medicos_cadastrados h2, 
-    .gerenciar_pacientes h2{
-        font-size: 15px;
-    }
-
-    .especialidades_procedimentos{
-        min-height: 72px;
-
-        padding: 14px;
-    }
-
+    .gerenciar_pacientes h2,
     .especialidades_procedimentos h2{
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .atalhos_popup_medicos{
         flex-direction: column;
-
-        gap: 8px;
     }
 
     .atalhos_popup{
         flex-direction: column;
     }
 
-    .atalho_pacientes,
-    .atalho_agenda,
+    .atalho_pacientes, 
+    .atalho_agenda, 
     .atalho_medicos{
         width: 100%;
-        flex: 1 1 auto;
-
-        min-height: 42px;
-
-        font-size: 13px;
+        min-width: 0;
     }
 
     hr{
@@ -454,29 +396,25 @@ hr{
     }
 }
 
-@media (max-height: 500px){
-    .sobreposicao{
-        align-items: flex-start;
-    }
+@media (max-width: 360px){
 
     .popup_medicos, .popup_pacientes{
-        margin: auto 0;
-        max-height: calc(100dvh - 24px);
-
-        justify-content: flex-start;
+        padding: 14px;
     }
-}
 
-@media (prefers-reduced-motion: reduce){
-    .fechar_popup,
-    .cadastro_medicos,
-    .medicos_cadastrados,
-    .especialidades_procedimentos,
+    .cadastro_medicos, 
     .cadastro_pacientes,
+    .medicos_cadastrados, 
     .gerenciar_pacientes,
-    .atalho_pacientes,
-    .atalho_agenda,
-    .atalho_medicos{
-        transition: none;
+    .especialidades_procedimentos{
+        padding: 13px;
+    }
+
+    .cadastro_medicos h2, 
+    .cadastro_pacientes h2,
+    .medicos_cadastrados h2, 
+    .gerenciar_pacientes h2,
+    .especialidades_procedimentos h2{
+        font-size: 15px;
     }
 }
