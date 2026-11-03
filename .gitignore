@@ -2,3 +2,14 @@
 #Dependências
 #============
 node_modules/
+
+#============
+#Variáveis de ambiente
+#============
+.env
+
+#============
+#Logs
+#============
+logs/
+*.log
