@@ -6,7 +6,7 @@ async function criarTabelaEspecialidade(): Promise<void> {
         await pool.query(
             `CREATE TABLE IF NOT EXISTS especialidade (
                 id SERIAL PRIMARY KEY,
-                nome VARCHAR(100) NOT NULL,
+                nome VARCHAR(100) NOT NULL UNIQUE,
                 ativo BOOLEAN NOT NULL DEFAULT TRUE
             )`
         );

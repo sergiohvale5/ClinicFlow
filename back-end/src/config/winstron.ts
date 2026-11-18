@@ -2,8 +2,8 @@ import winston from "winston";
 
 const { printf, combine, timestamp, colorize } = winston.format;
 
-const formatLogger = printf(({timestamp, level, message}) => {
-    return `[${timestamp}] ${level}: ${message}`
+const formatLogger = printf(({timestamp, level, message, error}) => {
+    return `[${timestamp}] ${level}: ${message} ${error instanceof Error ? `\n${error.stack}` : ""}`;
 });
 
 export const logger = winston.createLogger(

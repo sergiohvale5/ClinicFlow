@@ -6,8 +6,8 @@ async function criarTabelaProcedimento(): Promise<void>{
         await pool.query(
             `CREATE TABLE IF NOT EXISTS procedimento(
                 id SERIAL PRIMARY KEY,
-                nome VARCHAR(100) NOT NULL,
-                especialidade_id INTEGER NOT NULL,
+                nome VARCHAR(100) NOT NULL UNIQUE,
+                especialidade_id INTEGER NOT NULL UNIQUE,
                 ativo BOOLEAN NOT NULL DEFAULT TRUE,
 
                 FOREIGN KEY(especialidade_id)

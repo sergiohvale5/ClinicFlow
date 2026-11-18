@@ -7,7 +7,7 @@ async function criarTabelaMedico(): Promise<void> {
             `CREATE TABLE IF NOT EXISTS medico (
                 id SERIAL PRIMARY KEY,
                 nome VARCHAR(100) NOT NULL,
-                CRM VARCHAR(100) NOT NULL,
+                CRM VARCHAR(100) NOT NULL UNIQUE,
                 especialidade_id INTEGER NOT NULL,
                 valor_consulta REAL NOT NULL,
                 forma_atendimento VARCHAR(100) NOT NULL,

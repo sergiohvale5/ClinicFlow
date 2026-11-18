@@ -4,6 +4,7 @@ import cors from "cors";
 import morgan from "morgan";
 import helmet from "helmet";
 import { limit } from "../config/limit";
+import { router } from "../routes/routes";
 import { redis } from "../config/redis";
 import { logger } from "../config/winstron";
 import { env } from "../config/env";
@@ -22,13 +23,7 @@ server.use(limit);
 
 
 
-server.get("/teste", (req: Request, res: Response) => {
-    return res.status(200).json(
-        {
-            Message: "Api funcionando"
-        }
-    )
-})
+server.use("/", router);
 
 async function inicializar() {
     try{
