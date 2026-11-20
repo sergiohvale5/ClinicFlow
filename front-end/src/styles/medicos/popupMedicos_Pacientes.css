@@ -87,8 +87,8 @@
 
 .cadastroMedicos_medicosCadastrados, 
 .cadastrarPacientes_gerenciarPacientes{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 12px;
 
     min-width: 0;
@@ -105,7 +105,7 @@
     width: 100%;
     min-width: 0;
     height: 80px;
-
+    flex: 1;
     padding: 22px;
 
     border-radius: 14px;
@@ -350,7 +350,7 @@ hr{
 
     .cadastroMedicos_medicosCadastrados, 
     .cadastrarPacientes_gerenciarPacientes{
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 8px;
     }
 
@@ -396,25 +396,153 @@ hr{
     }
 }
 
-@media (max-width: 360px){
+/* ===== Notebook (1025px a 1536px) ===== */
+@media (min-width: 1025px) and (max-width: 1536px){
 
     .popup_medicos, .popup_pacientes{
+        padding: 20px;
+    }
+}
+
+/* ===== Telas de pouca altura (notebook 1366x768, tablet deitado) ===== */
+@media (max-height: 760px){
+
+    .popup_medicos, .popup_pacientes{
+        padding: 16px;
+    }
+
+    .titulo_medico, .titulo_paciente{
+        margin-bottom: 10px;
+    }
+
+    hr{
+        margin: 12px 0;
+    }
+}
+
+/* ===== Tablet (601px a 1024px) ===== */
+@media (min-width: 601px) and (max-width: 1024px){
+
+    .popup_medicos, .popup_pacientes{
+        max-width: 620px;
+        padding: 24px;
+    }
+
+    .cadastro_medicos,
+    .cadastro_pacientes,
+    .medicos_cadastrados,
+    .gerenciar_pacientes{
+        height: 92px;
+    }
+
+    .cadastro_medicos span,
+    .cadastro_pacientes span,
+    .medicos_cadastrados span,
+    .gerenciar_pacientes span,
+    .especialidades_procedimentos span{
+        font-size: 12px;
+    }
+
+    .atalho_pacientes,
+    .atalho_agenda,
+    .atalho_medicos{
+        min-height: 48px;
+    }
+}
+
+/* ===== Celulares pequenos (≤ 400px) ===== */
+@media (max-width: 400px){
+
+    .sobreposicao{
+        padding: 8px;
+    }
+
+    .popup_medicos, .popup_pacientes{
+        max-height: calc(100vh - 16px);
+        max-height: calc(100dvh - 16px);
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .titulo_medico, .titulo_paciente{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .cadastro_medicos,
+    .cadastro_pacientes,
+    .medicos_cadastrados,
+    .gerenciar_pacientes,
+    .especialidades_procedimentos{
         padding: 14px;
     }
 
-    .cadastro_medicos, 
-    .cadastro_pacientes,
-    .medicos_cadastrados, 
-    .gerenciar_pacientes,
-    .especialidades_procedimentos{
-        padding: 13px;
-    }
-
-    .cadastro_medicos h2, 
+    .cadastro_medicos h2,
     .cadastro_pacientes h2,
-    .medicos_cadastrados h2, 
+    .medicos_cadastrados h2,
     .gerenciar_pacientes h2,
     .especialidades_procedimentos h2{
         font-size: 15px;
+    }
+
+    .cadastro_medicos span,
+    .cadastro_pacientes span,
+    .medicos_cadastrados span,
+    .gerenciar_pacientes span,
+    .especialidades_procedimentos span{
+        font-size: 12px;
+    }
+
+    .atalhos_titulo{
+        font-size: 13px;
+    }
+}
+
+/* ===== Celular deitado (pouca altura) ===== */
+@media (max-height: 500px) and (orientation: landscape){
+
+    .sobreposicao{
+        padding: 8px;
+        align-items: flex-start;
+    }
+
+    .popup_medicos, .popup_pacientes{
+        max-height: calc(100vh - 16px);
+        max-height: calc(100dvh - 16px);
+        padding: 12px;
+    }
+
+    .titulo_medico, .titulo_paciente{
+        margin-bottom: 8px;
+    }
+
+    hr{
+        margin: 10px 0;
+    }
+}
+
+/* ===== Área de toque do botão fechar (celular e tablet) ===== */
+@media (max-width: 1024px){
+
+    .fechar_popup{
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* ===== Telas de toque: sem hover "preso" ===== */
+@media (hover: none){
+
+    .cadastro_medicos:hover,
+    .medicos_cadastrados:hover,
+    .especialidades_procedimentos:hover,
+    .cadastro_pacientes:hover,
+    .gerenciar_pacientes:hover,
+    .atalho_pacientes:hover,
+    .atalho_agenda:hover,
+    .atalho_medicos:hover,
+    .fechar_popup:hover{
+        transform: none;
+        border-color: #d9e2ef;
     }
 }
